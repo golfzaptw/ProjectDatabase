@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>หน้า index</title>
+	<title> Delivery </title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
 	
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
@@ -39,7 +39,7 @@
       </button>
 
      
-      <a class="navbar-brand" href="#">ร้านลุงเพชร</a>
+      <a class="navbar-brand" href="#">เธฃเน�เธฒเธ�เธฅเธธเธ�เน€เธ�เธ�เธฃ</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,20 +50,20 @@
       <ul class="nav navbar-nav navbar-right">
       <li  class="active"><a href="index.php">Home</a></li>
        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">เธฃเธฒเธขเธ�เธฒเธฃเธญเธฒเธซเธฒเธฃ <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">ประเภท:ต้ม</a></li>
+            <li><a href="#">เธ�เธฃเธฐเน€เธ เธ—:เธ•เน�เธก</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:ทอด</a></li>
+            <li><a href="#">เธ�เธฃเธฐเน€เธ เธ—:เธ—เธญเธ”</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:แกง</a></li>
+            <li><a href="#">เธ�เธฃเธฐเน€เธ เธ—:เน�เธ�เธ�</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:ผัด</a></li>
+            <li><a href="#">เธ�เธฃเธฐเน€เธ เธ—:เธ�เธฑเธ”</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
-        <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
-       <li><a href="document.php">คู่มือคำแนะนำ</a></li>
+       <li><a href="order.php">เธ•เธฒเธฃเธฒเธ�เธฅเธณเธ”เธฑเธ�เธ�เธฒเธฃเธชเธฑเน�เธ�เธ�เธทเน�เธญ</a></li>
+        <li><a href="ContactUs.php">เธ•เธดเธ”เธ•เน�เธญเธฃเน�เธฒเธ�</a></li>
+       <li><a href="document.php">เธ�เธนเน�เธกเธทเธญเธ�เธณเน�เธ�เธฐเธ�เธณ</a></li>
         
 
         <li class="dropdown">
@@ -146,7 +146,7 @@
                    
                   <center><img src="image/icon3.png" alt="..." class="img-circle"></center>
                   <div class="caption">
-                  <center><h3>สะดวกรวดเร็ว</h3></center>       
+                  <center><h3>เธชเธฐเธ”เธงเธ�เธฃเธงเธ”เน€เธฃเน�เธง</h3></center>       
       
     </div>
   </div>
@@ -155,7 +155,7 @@
                   
                   <center><img src="image/icon1.png" alt="..." class="img-circle"></center>
                   <div class="caption">
-                  <center><h3>สินค้ามีให้เลือกเยอะ</h3></center>       
+                  <center><h3>เธชเธดเธ�เธ�เน�เธฒเธกเธตเน�เธซเน�เน€เธฅเธทเธญเธ�เน€เธขเธญเธฐ</h3></center>       
                   
      
     </div>
@@ -165,7 +165,7 @@
                   
                   <center><img src="image/icon2.png" alt="..." class="img-circle"><center>
                   <div class="caption">
-                   <center><h3>เก็บเงินปลายทาง</h3></center>    
+                   <center><h3>เน€เธ�เน�เธ�เน€เธ�เธดเธ�เธ�เธฅเธฒเธขเธ—เธฒเธ�</h3></center>    
                   
       
     </div>
@@ -197,7 +197,7 @@
   <div class="col-md-6">
 <br><br><br>
   <div>
-      <H4> ทางร้านเลือกคัดสรรวัตถุดิบที่มีคุณภาพเพื่อคุณลูกค้าโดยเฉพาะเริ่มจากข้าวเเข็งมากปาหัวหมาแตก </H4>
+      <H4> เธ—เธฒเธ�เธฃเน�เธฒเธ�เน€เธฅเธทเธญเธ�เธ�เธฑเธ”เธชเธฃเธฃเธงเธฑเธ•เธ–เธธเธ”เธดเธ�เธ—เธตเน�เธกเธตเธ�เธธเธ“เธ เธฒเธ�เน€เธ�เธทเน�เธญเธ�เธธเธ“เธฅเธนเธ�เธ�เน�เธฒเน�เธ”เธขเน€เธ�เธ�เธฒเธฐเน€เธฃเธดเน�เธกเธ�เธฒเธ�เธ�เน�เธฒเธงเน€เน€เธ�เน�เธ�เธกเธฒเธ�เธ�เธฒเธซเธฑเธงเธซเธกเธฒเน�เธ•เธ� </H4>
 
 </div>
 </div>
@@ -227,7 +227,7 @@
 <br><br><br>
 
 <div class="container" >
-     <H2>เมนูแนะนำ  </H2>
+     <H2>เน€เธกเธ�เธนเน�เธ�เธฐเธ�เธณ  </H2>
 </div>
 
 
@@ -242,17 +242,17 @@
  <div class="thumbnail">
       <img src="image/3.jpg" >
       <div class="caption">
-        <h3>ข้าวกระเพราหมูสับ+ไข่ดาว <br>ราคา 35 บาท</h3>
+        <h3>เธ�เน�เธฒเธงเธ�เธฃเธฐเน€เธ�เธฃเธฒเธซเธกเธนเธชเธฑเธ�+เน�เธ�เน�เธ”เธฒเธง <br>เธฃเธฒเธ�เธฒ 35 เธ�เธฒเธ—</h3>
         <p></p><br><br>
-        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+        <p><a href="#" class="btn btn-primary" role="button">เธซเธดเธงเธ�เธฅเธดเธ�เน€เธฅเธข</a> </p>
       </div></div>
 </div>
   <div class="col-md-4"><div class="thumbnail">
       <img src="image/11.jpg" >
       <div class="caption">
-        <h3>ข้าวกระเพรากุ้ง+ไข่ดาว <br>ราคา 40 บาท</h3>
+        <h3>เธ�เน�เธฒเธงเธ�เธฃเธฐเน€เธ�เธฃเธฒเธ�เธธเน�เธ�+เน�เธ�เน�เธ”เธฒเธง <br>เธฃเธฒเธ�เธฒ 40 เธ�เธฒเธ—</h3>
         <p></p><br><br>
-        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+        <p><a href="#" class="btn btn-primary" role="button">เธซเธดเธงเธ�เธฅเธดเธ�เน€เธฅเธข</a> </p>
       </div>
     
 </div>
@@ -262,9 +262,9 @@
   <div class="thumbnail">
       <img src="image/5.jpg" >
       <div class="caption">
-       <h3>ข้าวหมูกระเทียม <br>ราคา 35 บาท</h3>
+       <h3>เธ�เน�เธฒเธงเธซเธกเธนเธ�เธฃเธฐเน€เธ—เธตเธขเธก <br>เธฃเธฒเธ�เธฒ 35 เธ�เธฒเธ—</h3>
         <p></p><br><br>
-        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+        <p><a href="#" class="btn btn-primary" role="button">เธซเธดเธงเธ�เธฅเธดเธ�เน€เธฅเธข</a> </p>
       </div></div></div>
 </div>
 </div>
