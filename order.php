@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">ร้านลุงเพชร</a>
+      <a class="navbar-brand" href="#">Ginmun_Delivery</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,16 +36,14 @@
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">ประเภท:ต้ม</a></li>
+            <li><a href="shop1.php">ต้ม</a></li>
+            <li><a href="#">ทอด</a></li>
+            <li><a href="#">แกง</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:ทอด</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:แกง</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">ประเภท:ผัด</a></li>
+            <li><a href="#">ผัด</a></li>
           </ul>
         </li>
-       <li class="active"><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
        <li><a href="document.php">คู่มือคำแนะนำ</a></li>
         

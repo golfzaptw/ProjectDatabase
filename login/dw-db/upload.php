@@ -3,8 +3,6 @@
 require_once('class.upload.php-master/src/class.upload.php') ;
 include ("Restrict.php");
 include ("codefromupload.php");
-include ("codefromupload2.php");
-include ("codefromupload3.php");
  
 // ส่วนกำหนดการเชื่อมต่อฐานข้อมูล
 $hostname_connection = "localhost";
@@ -60,7 +58,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Admin:ร้านลุงเพชร</title>
+  <title>Admin:Ginmun_Delivery</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
@@ -85,7 +83,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a  href="for-admin.php" class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
+      <a  href="for-admin.php" class="navbar-brand"   >Admin | Ginmun_Delivery</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -126,7 +124,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   </p>
 </form>
 </div>
-</div><br><br>
+</div><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -134,7 +132,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <div class="jumbotron">
 <div class="container">
-<form action="" method="post" enctype="multipart/form-data" name="form2" id="form2">
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form2">
   <p>
     <H2> อาหารประเภท ทอด </H2> <br><br>
     <input name="image_name" type="file" id="image_name" size="40" />
@@ -145,41 +143,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   </p>
 </form>
 </div>
-</div><br><br>
-
-
-
-<div class="jumbotron">
-<div class="container">
-<form action="" method="post" enctype="multipart/form-data" name="form3" id="form3">
-  <p>
-    <H2> อาหารประเภท แกง </H2> <br><br>
-    <input name="image_name" type="file" id="image_name" size="40" />
-  </p>
-  <p>
-    <input type="submit" value="Upload" />
-    <input type="hidden" name="MM_insert" value="form3" />
-  </p>
-</form>
 </div>
-</div><br><br>
-
-
-<div class="jumbotron">
-<div class="container">
-<form action="" method="post" enctype="multipart/form-data" name="form4" id="form4">
-  <p>
-    <H2> อาหารประเภท ผัด </H2> <br><br>
-    <input name="image_name" type="file" id="image_name" size="40" />
-  </p>
-  <p>
-    <input type="submit" value="Upload" />
-    <input type="hidden" name="MM_insert" value="form4" />
-  </p>
-</form>
-</div>
-</div><br><br>
-
 
 
 

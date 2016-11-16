@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="shop1.php"> ร้านลุงเพชร</a>
+      <a class="navbar-brand" href="shop1.php">Ginmun_Delivery | ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

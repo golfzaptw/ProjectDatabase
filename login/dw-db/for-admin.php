@@ -10,7 +10,7 @@ include ("Restrict.php");
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Admin:ร้านลุงเพชร</title>
+  <title>Admin:Ginmun_Delivery</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
@@ -30,7 +30,7 @@ include ("Restrict.php");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
+      <a class="navbar-brand"   >Admin | Ginmun_Delivery</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
