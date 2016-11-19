@@ -6,28 +6,28 @@
 </head>
 
 <body>
-	<table width="600" border="1" align="center" bordercolor="#666666">
-		<tr>
-			<td width="91" align="center" bgcolor="#CCCCCC"><strong>¿“æ</strong></td>
-			<td width="200" align="center" bgcolor="#CCCCCC"><strong>™◊ËÕÀπ—ß ◊Õ</strong></td>
-			<td width="44" align="center" bgcolor="#CCCCCC"><strong>√“§“</strong></td>
-			<td width="100" align="center" bgcolor="#CCCCCC"><strong>√“¬≈–‡Õ’¬¥ ‘π§È“</strong></td>
-		</tr>
+<table width="600" border="1" align="center" bordercolor="#666666">
+  <tr>
+    <td width="91" align="center" bgcolor="#CCCCCC"><strong>‡∏†‡∏≤‡∏û</strong></td>
+    <td width="200" align="center" bgcolor="#CCCCCC"><strong>‡∏ä‡∏∑‡πà‡∏≠‡∏´‡∏ô‡∏±‡∏á‡∏™‡∏∑‡∏≠</strong></td>
+    <td width="44" align="center" bgcolor="#CCCCCC"><strong>‡∏£‡∏≤‡∏Ñ‡∏≤</strong></td>
+    <td width="100" align="center" bgcolor="#CCCCCC"><strong>‡∏£‡∏≤‡∏¢‡∏•‡∏∞‡πÄ‡∏≠‡∏µ‡∏¢‡∏î‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</strong></td>
+  </tr>
   
   
   <?php
-		// connect db
-		include ("connect.inc");
-		$sql = "select * from product order by p_id"; // ‡√’¬°¢ÈÕ¡Ÿ≈¡“· ¥ß∑—ÈßÀ¡¥
-		$result = mysqli_query ( $conn, $sql );
-		while ( $row = mysqli_fetch_array ( $result ) ) {
-			echo "<tr>";
-			echo "<td align='center'><img src='img/" . $row ["p_pic"] . " ' width='80'></td>";
-			echo "<td align='left'>" . $row ["p_name"] . "</td>";
-			echo "<td align='center'>" . number_format ( $row ["p_price"], 2 ) . "</td>";
-			echo "<td align='center'><a href='product_detail.php?p_id=$row[p_id]'>§≈‘°</a></td>";
-			echo "</tr>";
-		}
-		?>
+  //connect db
+  include("connect.php");
+  $sql = "select * from product order by p_id";  //‡πÄ‡∏£‡∏µ‡∏¢‡∏Å‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡∏°‡∏≤‡πÅ‡∏™‡∏î‡∏á‡∏ó‡∏±‡πâ‡∏á‡∏´‡∏°‡∏î
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result))
+  {
+  	echo "<tr>";
+	echo "<td align='center'><img src='img/" . $row["p_pic"] ." ' width='80'></td>";
+	echo "<td align='left'>" . $row["p_name"] . "</td>";
+    echo "<td align='center'>" .number_format($row["p_price"],2). "</td>";
+    echo "<td align='center'><a href='product_detail.php?p_id=$row[p_id]'>‡∏Ñ‡∏•‡∏¥‡∏Å</a></td>";
+	echo "</tr>";
+  }
+  ?>
 </table>
-</body>

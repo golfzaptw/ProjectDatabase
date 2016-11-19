@@ -1,6 +1,6 @@
 <?php
-session_start ();
-include ("connect.inc");
+	session_start();
+    include("connect.inc");  
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,53 +9,56 @@ include ("connect.inc");
 <title>Confirm</title>
 </head>
 <body>
-	<!--ÊÃéÒ§µÑÇá»ÃÊÓËÃÑººÑ¹·Ö¡¡ÒÃÊÑè§«×éÍ -->
+<!--à¸ªà¸£à¹‰à¸²à¸‡à¸•à¸±à¸§à¹à¸›à¸£à¸ªà¸³à¸«à¸£à¸±à¸šà¸šà¸±à¸™à¸—à¸¶à¸à¸à¸²à¸£à¸ªà¸±à¹ˆà¸‡à¸‹à¸·à¹‰à¸­ -->
 <?php
-$name = $_REQUEST ["name"];
-$address = $_REQUEST ["address"];
-$email = $_REQUEST ["email"];
-$phone = $_REQUEST ["phone"];
-$total_qty = $_REQUEST ["total_qty"];
-$total = $_REQUEST ["total"];
-$dttm = Date ( "Y-m-d G:i:s" );
-// ºÑ¹·Ö¡¡ÒÃÊÑè§«×éÍÅ§ã¹ order_detail
-mysqli_query ( $conn, "BEGIN" );
-$sql1 = "insert into order_head values(null, '$dttm', '$name', '$address', '$email', '$phone', '$total_qty', '$total')";
-$query1 = mysqli_query ( $conn, $sql1 );
-// ¿Ñ§¡ìªÑè¹ MAX() ¨Ð¤×¹¤èÒ·ÕèÁÒ¡·ÕèÊØ´ã¹¤ÍÅÑÁ¹ì·ÕèÃÐºØ ÍÍ¡ÁÒ ËÃ×Í¨Ð¾Ù´§èÒÂæ¡çÇèÒ ãªéÊÓËÃÑºËÒ¤èÒ·ÕèÁÒ¡·ÕèÊØ´ ¹Ñè¹àÍ§.
-$sql2 = "select max(o_id) as o_id from order_head where o_name='$name' and o_email='$email' and o_dttm='$dttm' ";
-$query2 = mysqli_query ( $conn, $sql2 );
-$row = mysqli_fetch_array ( $query2 );
-$o_id = $row ["o_id"];
-// PHP foreach() à»ç¹¤ÓÊÑè§à¾×èÍ¹Ó¢éÍÁÙÅÍÍ¡ÁÒ¨Ò¡µÑÇá»Å·Õèà»ç¹»ÃÐàÀ· array â´ÂÊÒÁÒÃ¶àÃÕÂ¡¤èÒä´é·Ñé§ $key áÅÐ $value ¢Í§ array
-foreach ( $_SESSION ['cart'] as $p_id => $qty ) {
-	$sql3 = "select * from product where p_id=$p_id";
-	$query3 = mysqli_query ( $conn, $sql3 );
-	$row3 = mysqli_fetch_array ( $query3 );
-	$total = $row3 ['p_price'] * $qty;
-	
-	$sql4 = "insert into order_detail values(null, '$o_id', '$p_id', '$qty', '$total')";
-	$query4 = mysqli_query ( $conn, $sql4 );
-}
-
-if ($query1 && $query4) {
-	mysqli_query ( $conn, "COMMIT" );
-	$msg = "ºÑ¹·Ö¡¢éÍÁÙÅàÃÕÂºÃéÍÂáÅéÇ ";
-	foreach ( $_SESSION ['cart'] as $p_id ) {
-		// unset($_SESSION['cart'][$p_id]);
-		unset ( $_SESSION ['cart'] );
+	$name = $_REQUEST["name"];
+	$address = $_REQUEST["address"];
+	$email = $_REQUEST["email"];
+	$phone = $_REQUEST["phone"];
+	$total_qty = $_REQUEST["total_qty"];
+	$total = $_REQUEST["total"];
+	$dttm = Date("Y-m-d G:i:s");
+	//à¸šà¸±à¸™à¸—à¸¶à¸à¸à¸²à¸£à¸ªà¸±à¹ˆà¸‡à¸‹à¸·à¹‰à¸­à¸¥à¸‡à¹ƒà¸™ order_detail
+	mysqli_query($conn, "BEGIN"); 
+	$sql1	= "insert into order_head values(null, '$dttm', '$name', '$address', '$email', '$phone', '$total_qty', '$total')";
+	$query1	= mysqli_query($conn, $sql1);
+	//à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¹ˆà¸™ MAX() à¸ˆà¸°à¸„à¸·à¸™à¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸¡à¸²à¸à¸—à¸µà¹ˆà¸ªà¸¸à¸”à¹ƒà¸™à¸„à¸­à¸¥à¸±à¸¡à¸™à¹Œà¸—à¸µà¹ˆà¸£à¸°à¸šà¸¸ à¸­à¸­à¸à¸¡à¸² à¸«à¸£à¸·à¸­à¸ˆà¸°à¸žà¸¹à¸”à¸‡à¹ˆà¸²à¸¢à¹†à¸à¹‡à¸§à¹ˆà¸² à¹ƒà¸Šà¹‰à¸ªà¸³à¸«à¸£à¸±à¸šà¸«à¸²à¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸¡à¸²à¸à¸—à¸µà¹ˆà¸ªà¸¸à¸” à¸™à¸±à¹ˆà¸™à¹€à¸­à¸‡.
+	$sql2 = "select max(o_id) as o_id from order_head where o_name='$name' and o_email='$email' and o_dttm='$dttm' ";
+	$query2	= mysqli_query($conn, $sql2);
+	$row = mysqli_fetch_array($query2);
+	$o_id = $row["o_id"];
+//PHP foreach() à¹€à¸›à¹‡à¸™à¸„à¸³à¸ªà¸±à¹ˆà¸‡à¹€à¸žà¸·à¹ˆà¸­à¸™à¸³à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸­à¸­à¸à¸¡à¸²à¸ˆà¸²à¸à¸•à¸±à¸§à¹à¸›à¸¥à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™à¸›à¸£à¸°à¹€à¸ à¸— array à¹‚à¸”à¸¢à¸ªà¸²à¸¡à¸²à¸£à¸–à¹€à¸£à¸µà¸¢à¸à¸„à¹ˆà¸²à¹„à¸”à¹‰à¸—à¸±à¹‰à¸‡ $key à¹à¸¥à¸° $value à¸‚à¸­à¸‡ array
+	foreach($_SESSION['cart'] as $p_id=>$qty)
+	{
+		$sql3	= "select * from product where p_id=$p_id";
+		$query3	= mysqli_query($conn, $sql3);
+		$row3	= mysqli_fetch_array($query3);
+		$total	= $row3['p_price']*$qty;
+		
+		$sql4	= "insert into order_detail values(null, '$o_id', '$p_id', '$qty', '$total')";
+		$query4	= mysqli_query($conn, $sql4);
 	}
-} else {
-	mysqli_query ( $conn, "ROLLBACK" );
-	$msg = "ºÑ¹·Ö¡¢éÍÁÙÅäÁèÊÓàÃç¨ ¡ÃØ³ÒµÔ´µèÍà¨éÒË¹éÒ·Õè¤èÐ ";
-}
+	
+	if($query1 && $query4){
+		mysqli_query($conn, "COMMIT");
+		$msg = "à¸šà¸±à¸™à¸—à¸¶à¸à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢à¹à¸¥à¹‰à¸§ ";
+		foreach($_SESSION['cart'] as $p_id)
+		{	
+			//unset($_SESSION['cart'][$p_id]);
+			unset($_SESSION['cart']);
+		}
+	}
+	else{
+		mysqli_query($conn, "ROLLBACK");  
+		$msg = "à¸šà¸±à¸™à¸—à¸¶à¸à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹„à¸¡à¹ˆà¸ªà¸³à¹€à¸£à¹‡à¸ˆ à¸à¸£à¸¸à¸“à¸²à¸•à¸´à¸”à¸•à¹ˆà¸­à¹€à¸ˆà¹‰à¸²à¸«à¸™à¹‰à¸²à¸—à¸µà¹ˆà¸„à¹ˆà¸° ";	
+	}
 ?>
 <script type="text/javascript">
 	alert("<?php echo $msg;?>");
 	window.location ='product.php';
 </script>
 
-
+ 
 
 
 
