@@ -54,7 +54,7 @@
             <li><a href="#">ผัด</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li><a href="order.php">ตารางลำดับการสั่งซื้</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
        <li><a href="document.php">คู่มือคำแนะนำ</a></li>
         
