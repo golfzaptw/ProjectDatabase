@@ -1,6 +1,6 @@
 <?php
-session_start ();
-include ("connect.inc");
+	session_start();
+    include("connect.php");  
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,67 +9,69 @@ include ("connect.inc");
 <title>Checkout</title>
 </head>
 <body>
-	<form id="frmcart" name="frmcart" method="post" action="saveorder.php">
-		<table width="600" border="0" align="center" class="square">
-			<tr>
-				<td width="1558" colspan="4" bgcolor="#FFDDBB"><strong> —Ëß´◊ÈÕ ‘π§È“</strong></td>
-			</tr>
-			<tr>
-				<td bgcolor="#F9D5E3"> ‘π§È“</td>
-				<td align="center" bgcolor="#F9D5E3">√“§“</td>
-				<td align="center" bgcolor="#F9D5E3">®”π«π</td>
-				<td align="center" bgcolor="#F9D5E3">√«¡/√“¬°“√</td>
-			</tr>
+<form id="frmcart" name="frmcart" method="post" action="saveorder.php">
+  <table width="600" border="0" align="center" class="square">
+    <tr>
+      <td width="1558" colspan="4" bgcolor="#FFDDBB">
+      <strong>‡∏™‡∏±‡πà‡∏á‡∏ã‡∏∑‡πâ‡∏≠‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</strong></td>
+    </tr>
+    <tr>
+      <td bgcolor="#F9D5E3">‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤</td>
+      <td align="center" bgcolor="#F9D5E3">‡∏£‡∏≤‡∏Ñ‡∏≤</td>
+      <td align="center" bgcolor="#F9D5E3">‡∏à‡∏≥‡∏ô‡∏ß‡∏ô</td>
+      <td align="center" bgcolor="#F9D5E3">‡∏£‡∏ß‡∏°/‡∏£‡∏≤‡∏¢‡∏Å‡∏≤‡∏£</td>
+    </tr>
 <?php
-$total = 0;
-foreach ( $_SESSION ['cart'] as $p_id => $qty ) {
-	$sql = "select * from product where p_id=$p_id";
-	$query = mysqli_query ( $conn, $sql );
-	$row = mysqli_fetch_array ( $query );
-	$sum = $row ['p_price'] * $qty;
-	$total += $sum;
+	$total=0;
+	foreach($_SESSION['cart'] as $p_id=>$qty)
+	{
+		$sql	= "select * from product where p_id=$p_id";
+		$query	= mysqli_query($conn, $sql);
+		$row	= mysqli_fetch_array($query);
+		$sum	= $row['p_price']*$qty;
+		$total	+= $sum;
+    echo "<tr>";
+    echo "<td>" . $row["p_name"] . "</td>";
+    echo "<td align='right'>" .number_format($row['p_price'],2) ."</td>";
+    echo "<td align='right'>$qty</td>";
+    echo "<td align='right'>".number_format($sum,2)."</td>";
+    echo "</tr>";
+	}
 	echo "<tr>";
-	echo "<td>" . $row ["p_name"] . "</td>";
-	echo "<td align='right'>" . number_format ( $row ['p_price'], 2 ) . "</td>";
-	echo "<td align='right'>$qty</td>";
-	echo "<td align='right'>" . number_format ( $sum, 2 ) . "</td>";
-	echo "</tr>";
-}
-echo "<tr>";
-echo "<td  align='right' colspan='3' bgcolor='#F9D5E3'><b>√«¡</b></td>";
-echo "<td align='right' bgcolor='#F9D5E3'>" . "<b>" . number_format ( $total, 2 ) . "</b>" . "</td>";
-echo "</tr>";
+    echo "<td  align='right' colspan='3' bgcolor='#F9D5E3'><b>‡∏£‡∏ß‡∏°</b></td>";
+    echo "<td align='right' bgcolor='#F9D5E3'>"."<b>".number_format($total,2)."</b>"."</td>";
+    echo "</tr>";
 ?>
 </table>
-		<p>
-		
-		
-		<table border="0" cellspacing="0" align="center">
-			<tr>
-				<td colspan="2" bgcolor="#CCCCCC">√“¬≈–‡Õ’¬¥„π°“√µ‘¥µËÕ</td>
-			</tr>
-			<tr>
-				<td bgcolor="#EEEEEE">™◊ËÕ</td>
-				<td><input name="name" type="text" id="name" required /></td>
-			</tr>
-			<tr>
-				<td width="22%" bgcolor="#EEEEEE">∑’ËÕ¬ŸË</td>
-				<td width="78%"><textarea name="address" cols="35" rows="5"
-						id="address" required></textarea></td>
-			</tr>
-			<tr>
-				<td bgcolor="#EEEEEE">Õ’‡¡≈</td>
-				<td><input name="email" type="email" id="email" required /></td>
-			</tr>
-			<tr>
-				<td bgcolor="#EEEEEE">‡∫Õ√Ïµ‘¥µËÕ</td>
-				<td><input name="phone" type="text" id="phone" required /></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center" bgcolor="#CCCCCC"><input
-					type="submit" name="Submit2" value=" —Ëß´◊ÈÕ" /></td>
-			</tr>
-		</table>
-	</form>
+<p>    
+<table border="0" cellspacing="0" align="center">
+<tr>
+	<td colspan="2" bgcolor="#CCCCCC">‡∏£‡∏≤‡∏¢‡∏•‡∏∞‡πÄ‡∏≠‡∏µ‡∏¢‡∏î‡πÉ‡∏ô‡∏Å‡∏≤‡∏£‡∏ï‡∏¥‡∏î‡∏ï‡πà‡∏≠</td>
+</tr>
+<tr>
+    <td bgcolor="#EEEEEE">‡∏ä‡∏∑‡πà‡∏≠</td>
+    <td><input name="name" type="text" id="name" required/></td>
+</tr>
+<tr>
+    <td width="22%" bgcolor="#EEEEEE">‡∏ó‡∏µ‡πà‡∏≠‡∏¢‡∏π‡πà</td>
+    <td width="78%">
+    <textarea name="address" cols="35" rows="5" id="address" required></textarea>
+    </td>
+</tr>
+<tr>
+  	<td bgcolor="#EEEEEE">‡∏≠‡∏µ‡πÄ‡∏°‡∏•</td>
+  	<td><input name="email" type="email" id="email"  required/></td>
+</tr>
+<tr>
+  	<td bgcolor="#EEEEEE">‡πÄ‡∏ö‡∏≠‡∏£‡πå‡∏ï‡∏¥‡∏î‡∏ï‡πà‡∏≠</td>
+  	<td><input name="phone" type="text" id="phone" required /></td>
+</tr>
+<tr>
+	<td colspan="2" align="center" bgcolor="#CCCCCC">
+	<input type="submit" name="Submit2" value="‡∏™‡∏±‡πà‡∏á‡∏ã‡∏∑‡πâ‡∏≠" />
+</td>
+</tr>
+</table>
+</form>
 </body>
 </html>

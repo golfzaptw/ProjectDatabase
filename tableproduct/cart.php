@@ -56,7 +56,7 @@
 $total=0;
 if(!empty($_SESSION['cart']))
 {
-	include("connect.inc");
+	include("connect.php");
 	foreach($_SESSION['cart'] as $p_id=>$qty)
 	{
 		$sql = "select * from product where p_id=$p_id";
