@@ -1,3 +1,4 @@
+
 <?php
 include ("Restrict.php");
 
@@ -5,21 +6,23 @@ include ("Restrict.php");
 
 
 
-<!-- ข้างบน คือ ที่ ต่อ database ในชื่อ Admin ที่ทำ  Restrict -->
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Admin:ร้านลุงเพชร</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+
+
 </head>
 <body>
 
-    
-    <nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
+
+<nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
 <div class="container">
   
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +33,7 @@ include ("Restrict.php");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
+      <a href="for-admin.php" class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,26 +54,48 @@ include ("Restrict.php");
 
 <br><br><br><br><br><br><br><br><br>
 
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/icon5.png" style="width:228px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
- 
-   <h1>ยินดีต้อนรับ: Admin </h1>
-
-</div>
-</div>
-</div>
 
 
 
 
+<?php
+$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");
+$objDB = mysql_select_db("admin");
+$strSQL = "SELECT * FROM type1";
+$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+?>
 
 
 
-
-
-</body></html>
+<div class="center"> 
+<center><H4>อาหารประเภท:ต้ม</H4></center><br><br>
+<center><table width="700" border="1">
+  <tr>
+    <th width="91"> <div align="center">ชื่ออาหาร </div></th>
+    <th width="90"> <div align="center">ระยะเวลาในการทำ(นาที) </div></th>
+    <th width="97"> <div align="center">calorie </div></th>
+    <th width="97"> <div align="center">ราคา/บาท </div></th>
+    
+    <th width="30"> <div align="center">Edit </div></th>
+  </tr></center>
+<?php
+while($objResult = mysql_fetch_array($objQuery))
+{
+?>
+  <tr>
+    <td><div align="center"><?php echo $objResult["name"];?></div></td>
+    <td><?php echo $objResult["type"];?></td>
+    <td><?php echo $objResult["calorie"];?></td>
+    <td><div align="center"><?php echo $objResult["price"];?></div></td>
+    
+    <td align="center"><a href="phpMySQLEditRecordForm.php?CusID=<?php echo $objResult["name"];?>">Edit</a></td>
+  </tr>
+<?php
+}
+?>
+</table></div>
+<?php
+mysql_close($objConnect);
+?>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -20,41 +20,62 @@
 
 
 
+
+<style >
+  
+.facebook:hover{
+  opacity: 0.6;
+
+}
+
+
+
+</style>
+
+
+ 
+
 <body>
 
        
 <nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
 <div class="container">
+
+
  
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+ 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Ginmun_Delivery</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
+      <a class="navbar-brand">  <img class="circle" src="./image/icon5.png" width="30" height="30"  border-radius="50"/></a>
+      <a class="navbar-brand" href="#">ร้านลุงเพชร </a>
+      
+    </div>
+   
 
 
       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php">Home</a></li>
+      <li  class="active"><a href="index.php">Home</a></li>
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">ต้ม</a></li>
-            <li><a href="#">ทอด</a></li>
-            <li><a href="#">แกง</a></li>
+            <li><a href="foods1.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">ผัด</a></li>
+            <li><a href="#">ประเภท:ทอด</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ประเภท:แกง</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">ประเภท:ผัด</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้</a></li>
+       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
        <li><a href="document.php">คู่มือคำแนะนำ</a></li>
         
@@ -62,7 +83,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Login Facebook</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>
@@ -79,6 +100,8 @@
 
 
 
+
+<br><br>
 <div class="">
   
 
@@ -94,16 +117,16 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="./image/01.jpg" alt="...">
+      <img src="./image/rgb1.jpg" alt="...">
       
     </div>
     <div class="item">
-      <img src="./image/022.jpg" alt="...">
+      <img src="./image/rgb2.jpg" alt="...">
       
     </div>
 
     <div class="item">
-      <img src="./image/03.jpg" alt="...">
+      <img src="./image/rgb3.jpg" alt="...">
       
     </div>
     
@@ -185,16 +208,17 @@
 <div class="container">
 <div class="row">
       <div class="col-md-6">
-      <img src="image/1.jpg" style="width:404px;height:228px;" >
+      <img src="image/2.jpg" style="width:404px;height:228px;" >
       </div>
   <div class="col-md-6">
 <br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
+  <div>
+      <H4> ทางร้านเลือกคัดสรรวัตถุดิบที่มีคุณภาพเพื่อคุณลูกค้าโดยเฉพาะเริ่มจากข้าวเเข็งมากปาหัวหมาแตก </H4>
 
 </div>
 </div>
 </div>
-</div>
+</div><br><br><br><br><br> <br><br>
 
 
 <div class="jumbotron">
@@ -208,20 +232,94 @@
       </div>
   <div class="col-md-6">
 
-  <img src="image/2.jpg" style="width:404px;height:228px;" align="right" >
-    <div>
+  <img src="image/icon10.png" style="width:404px;height:228px;" align="right" >
+    </div>
 
 </div>
 </div>
 </div>
 </div>
 
+<br><br><br>
+
+<div class="container" >
+     <H2>เมนูแนะนำ  </H2>
+</div>
 
 
 
 
 
 
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+
+ <div class="thumbnail">
+      <img src="image/3.jpg" >
+      <div class="caption">
+        <h3>ข้าวกระเพราหมูสับ+ไข่ดาว <br>ราคา 35 บาท</h3>
+        <p></p><br><br>
+        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+      </div></div>
+</div>
+  <div class="col-md-4"><div class="thumbnail">
+      <img src="image/11.jpg" >
+      <div class="caption">
+        <h3>ข้าวกระเพรากุ้ง+ไข่ดาว <br>ราคา 40 บาท</h3>
+        <p></p><br><br>
+        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+      </div>
+    
+</div>
+</div>
+
+  <div class="col-md-4">
+  <div class="thumbnail">
+      <img src="image/5.jpg" >
+      <div class="caption">
+       <h3>ข้าวหมูกระเทียม <br>ราคา 35 บาท</h3>
+        <p></p><br><br>
+        <p><a href="#" class="btn btn-primary" role="button">หิวคลิกเลย</a> </p>
+      </div></div></div>
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- ส่วนการแสดง POPUP -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ขั้นตอนการสั่งอาหารเพียง 3 ขั้นตอน</h4>
+      </div>
+      <div class="modal-body" align="center">
+
+
+
+     <a href="loginfacebook/index.php" class="facebook"> 
+     <img src="./image/BS.jpg" width="500" height="200" >
+
+
+     </a>
+
+        
+        
+    
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

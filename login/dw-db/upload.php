@@ -3,6 +3,9 @@
 require_once('class.upload.php-master/src/class.upload.php') ;
 include ("Restrict.php");
 include ("codefromupload.php");
+include ("codefromupload2.php");
+include ("codefromupload3.php");
+
  
 // ส่วนกำหนดการเชื่อมต่อฐานข้อมูล
 $hostname_connection = "localhost";
@@ -14,13 +17,20 @@ $connection = mysql_pconnect($hostname_connection, $username_connection, $passwo
 mysql_query( "SET NAMES UTF8" ) ;
  
  
+
 //  ถ้าหากหน้านี้ถูกเรียก เพราะการ submit form  
 //  ประโยคนี้จะเป็นจริงกรณีเดียวก็ด้วยการ submit form 
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
- 
+
+    
+  
+   
+
+
+  
     // เริ่มต้นใช้งาน class.upload.php ด้วยการสร้าง instant จากคลาส
     $upload_image = new upload($_FILES['image_name']) ; // $_FILES['image_name'] ชื่อของช่องที่ให้เลือกไฟล์เพื่ออัปโหลด
- 
+    
     //  ถ้าหากมีภาพถูกอัปโหลดมาจริง
     if ( $upload_image->uploaded ) {
  
@@ -40,6 +50,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
  
             // เก็บชื่อภาพลงฐานข้อมูล
             $insertSQL = sprintf("INSERT INTO tbl_image (image_name) VALUES ( '%s' )", $image_name );
+            
+
             echo $insertSQL ;
             mysql_select_db($database_connection, $connection);
             $Result1 = mysql_query($insertSQL, $connection) or die(mysql_error());
@@ -58,7 +70,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Admin:Ginmun_Delivery</title>
+  <title>Admin:ร้านลุงเพชร</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
@@ -83,7 +95,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a  href="for-admin.php" class="navbar-brand"   >Admin | Ginmun_Delivery</a>
+      <a  href="for-admin.php" class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,8 +103,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
       
       
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="upload.php">อัพโหลดสินค้า</a></li>
-        <li><a href="#">รายการอาหารในร้าน</a></li>
+      <li><a href="upload.php">อัพโหลดรูปสินค้า</a></li>
+        <li><a href="edittype1.php">รายการอาหารในร้าน</a></li>
           <li><a href="#">ตารางการสั่งอาหาร</a></li>
             <li><a href="#">รับออเดอร์</a></li>
              <li><a href="<?php echo $logoutAction ?>">logout</a></li>  <!-- /ตรงนี้คือ  logout database >
@@ -116,6 +128,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <p>
     <H2> อาหารประเภท ต้ม </H2> <br><br>
+    
     <input name="image_name" type="file" id="image_name" size="40" />
   </p>
   <p>
@@ -124,7 +137,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   </p>
 </form>
 </div>
-</div><br><br><br><br><br><br><br><br><br>
+</div><br><br>
 
 
 
@@ -132,9 +145,10 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <div class="jumbotron">
 <div class="container">
-<form action="" method="post" enctype="multipart/form-data" name="form1" id="form2">
+<form action="" method="post" enctype="multipart/form-data" name="form2" id="form2">
   <p>
     <H2> อาหารประเภท ทอด </H2> <br><br>
+     
     <input name="image_name" type="file" id="image_name" size="40" />
   </p>
   <p>
@@ -143,7 +157,41 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   </p>
 </form>
 </div>
+</div><br><br>
+
+
+
+<div class="jumbotron">
+<div class="container">
+<form action="" method="post" enctype="multipart/form-data" name="form3" id="form3">
+  <p>
+    <H2> อาหารประเภท แกง </H2> <br><br>
+    <input name="image_name" type="file" id="image_name" size="40" />
+  </p>
+  <p>
+    <input type="submit" value="Upload" />
+    <input type="hidden" name="MM_insert" value="form3" />
+  </p>
+</form>
 </div>
+</div><br><br>
+
+
+<div class="jumbotron">
+<div class="container">
+<form action="" method="post" enctype="multipart/form-data" name="form4" id="form4">
+  <p>
+    <H2> อาหารประเภท ผัด </H2> <br><br>
+    <input name="image_name" type="file" id="image_name" size="40" />
+  </p>
+  <p>
+    <input type="submit" value="Upload" />
+    <input type="hidden" name="MM_insert" value="form4" />
+  </p>
+</form>
+</div>
+</div><br><br>
+
 
 
 

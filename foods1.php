@@ -3,12 +3,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>order</title>
+  <title>อาหารประเภท:ต้ม</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
+
 
 <style >
   
@@ -48,7 +49,7 @@
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="foods1.php">ประเภท:ต้ม</a></li>
+            <li class="active"><a href="foods1.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
@@ -65,7 +66,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+           <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>
@@ -77,7 +78,51 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-</div>
+</div> <br><br><br><br><br><br><br><br><br>
+
+
+
+
+<?php
+$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");
+$objDB = mysql_select_db("admin");
+$strSQL = "SELECT * FROM type1";
+$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+?>
+
+
+
+<div class="center"> 
+<center><H4>อาหารประเภท:ต้ม</H4></center><br><br>
+<center><table width="700" border="1">
+  <tr>
+    <th width="91"> <div align="center">ชื่ออาหาร </div></th>
+    <th width="90"> <div align="center">ระยะเวลาในการทำ </div></th>
+    <th width="80"> <div align="center">calorie </div></th>
+    <th width="97"> <div align="center">ราคา/บาท </div></th>
+    
+    
+  </tr></center>
+<?php
+while($objResult = mysql_fetch_array($objQuery))
+{
+?>
+  <tr>
+    <td><div align="center"><?php echo $objResult["name"];?></div></td>
+    <td><?php echo $objResult["type"];?></td>
+    <td><?php echo $objResult["calorie"];?></td>
+    <td><div align="center"><?php echo $objResult["price"];?></div></td>
+    
+    
+  </tr>
+<?php
+}
+?>
+</table></div>
+<?php
+mysql_close($objConnect);
+?>
+
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -108,8 +153,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 
