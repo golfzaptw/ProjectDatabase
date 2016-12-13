@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>document</title>
+  <title>อาหารประเภท:ต้ม</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
@@ -21,7 +21,6 @@
 
 
 </style>
-
 <body>
 
     
@@ -50,24 +49,24 @@
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="foods1.php">ประเภท:ต้ม</a></li>
+            <li ><a href="foods1.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods2.php">ประเภท:ทอด</a></li>
+            <li ><a href="foods2.php">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods3.php">ประเภท:แกง</a></li>
+            <li  ><a href="foods3.php">ประเภท:แกง</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods4.php">ประเภท:ผัด</a></li>
+            <li class="active" ><a href="foods4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li class="active"><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
-       <li class="active"><a href="document.php">คู่มือคำแนะนำ</a></li>
+       <li><a href="document.php">คู่มือคำแนะนำ</a></li>
         
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+           <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>
@@ -79,82 +78,50 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-</div>
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/doc2.jpg" style="width:404px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
-
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      
-<br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
-
-      </div>
-  <div class="col-md-6">
-
-  <img src="image/doc1.jpg" style="width:404px;height:228px;" align="right" >
-    </div>
-
-</div>
-</div>
-</div>
-</div>
+</div> <br><br><br><br><br><br><br><br><br>
 
 
 
 
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/1.jpg" style="width:404px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
-
-</div>
-</div>
-</div>
-</div>
+<?php
+$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");
+$objDB = mysql_select_db("admin");
+$strSQL = "SELECT * FROM type4";
+$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+?>
 
 
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
 
-      </div>
-  <div class="col-md-6">
-
-  <img src="image/2.jpg" style="width:404px;height:228px;" align="right" >
-    <div>
-
-</div>
-</div>
-</div>
-</div>
-
+<div class="center"> 
+<center><H4>อาหารประเภท:ผัด</H4></center><br><br>
+<center><table width="700" border="1">
+  <tr>
+    <th width="91"> <div align="center">ชื่ออาหาร </div></th>
+    <th width="90"> <div align="center">ระยะเวลาในการทำ </div></th>
+    <th width="80"> <div align="center">calorie </div></th>
+    <th width="97"> <div align="center">ราคา/บาท </div></th>
+    
+    
+  </tr></center>
+<?php
+while($objResult = mysql_fetch_array($objQuery))
+{
+?>
+  <tr>
+    <td><div align="center"><?php echo $objResult["name"];?></div></td>
+    <td><?php echo $objResult["type"];?></td>
+    <td><?php echo $objResult["calorie"];?></td>
+    <td><div align="center"><?php echo $objResult["price"];?></div></td>
+    
+    
+  </tr>
+<?php
+}
+?>
+</table></div>
+<?php
+mysql_close($objConnect);
+?>
 
 
 
@@ -186,6 +153,23 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

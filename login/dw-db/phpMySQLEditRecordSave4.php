@@ -1,14 +1,11 @@
+
 <?php
 include ("Restrict.php");
 
 ?>
-
-
-
-<!-- ข้างบน คือ ที่ ต่อ database ในชื่อ Admin ที่ทำ  Restrict -->
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Admin:ร้านลุงเพชร</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
@@ -16,10 +13,10 @@ include ("Restrict.php");
   <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
+</head>
 <body>
 
-    
-    <nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
+<nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
 <div class="container">
   
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +27,7 @@ include ("Restrict.php");
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
+      <a href="for-admin.php" class="navbar-brand"   >Admin | ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,11 +35,10 @@ include ("Restrict.php");
       
       
       <ul class="nav navbar-nav navbar-right">
-      
- <li class="dropdown">
+      <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหารภายในร้าน <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="edittype1.php">ประเภท:ต้ม</a></li>
+             <li><a href="edittype1.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="edittype2.php">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
@@ -51,8 +47,6 @@ include ("Restrict.php");
             <li><a href="edittype4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-
-
           <li><a href="#">ตารางการสั่งอาหาร</a></li>
             <li><a href="#">รับออเดอร์</a></li>
             <li><a href="<?php echo $logoutAction ?>">logout</a></li>  <!-- /ตรงนี้คือ  logout database >
@@ -64,19 +58,31 @@ include ("Restrict.php");
 
 <br><br><br><br><br><br><br><br><br>
 
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/icon5.png" style="width:228px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
- 
-   <h1>ยินดีต้อนรับ: Admin </h1>
 
-</div>
-</div>
-</div>
+<?php
+$objConnect = mysql_connect("localhost","root","") or die("Error Connect to Database");
+$objDB = mysql_select_db("admin");
+$strSQL = "UPDATE type4 SET ";
+$strSQL .="name = '".$_POST["txtCustomerID"]."' ";
+$strSQL .=",type = '".$_POST["txtName"]."' ";
+$strSQL .=",calorie = '".$_POST["txtEmail"]."' ";
+$strSQL .=",price = '".$_POST["txtCountryCode"]."' ";
+$strSQL .="WHERE name = '".$_GET["CusID"]."' ";
+$objQuery = mysql_query($strSQL);
+if($objQuery)
+{
+	//echo "Save Done.";
+	
+
+}
+else
+{
+	echo "Error Save [".$strSQL."]";
+}
+mysql_close($objConnect);
+?>
+
+<center><H2>บันทักเรียบร้อย</H2></center>
 
 
 
@@ -86,4 +92,15 @@ include ("Restrict.php");
 
 
 
-</body></html>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

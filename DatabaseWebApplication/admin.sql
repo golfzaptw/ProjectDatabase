@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2016 at 10:24 AM
+-- Generation Time: Dec 13, 2016 at 10:18 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -55,52 +55,7 @@ CREATE TABLE `tbl_image` (
 --
 
 INSERT INTO `tbl_image` (`image_id`, `image_name`) VALUES
-(0, 'index1.jpg'),
-(0, 'icon1.png'),
-(0, '022.jpg'),
-(0, 'icon6.png'),
-(0, '03.jpg'),
-(0, 'index4.jpg'),
-(0, 'index4_1.jpg'),
-(0, 'index3_1.jpg'),
-(0, 'index3_2.jpg'),
-(0, 'iconlogin.png'),
-(0, 'YYYYYYYYYYYY.jpg'),
-(0, 'YYYYYYYYYYYYYYYYY.jpg'),
-(0, 'YYYYYYYYY.jpg'),
-(0, 'YYYYYYY.jpg'),
-(0, 'doc1.jpg'),
-(0, 'plakrim.jpg'),
-(0, 'plakrim_1.jpg'),
-(0, 'plakrim_2.jpg'),
-(0, 'plakrim_3.jpg'),
-(0, '1.jpg'),
-(0, 'icon2.png'),
-(0, '5.jpg'),
-(0, '5_1.jpg'),
-(0, '4.jpg'),
-(0, 'icon7.png'),
-(0, 'test.png'),
-(0, 'test_1.png'),
-(0, 'doc2.jpg'),
-(0, '11.jpg'),
-(0, ''),
-(0, '11_1.jpg'),
-(0, '11_2.jpg'),
-(0, '11_3.jpg'),
-(0, 'icon1.png'),
-(0, 'icon1_1.png'),
-(0, 'icon13.png'),
-(0, 'icon1_2.png'),
-(0, 'icon1_3.png'),
-(0, 'icon7_1.png'),
-(0, 'icon7_2.png'),
-(0, 'doc2_1.jpg'),
-(0, 'doc2_2.jpg'),
-(0, ''),
-(0, '4_1.jpg'),
-(0, 'icon10.png'),
-(0, 'icon10_1.png');
+(0, '184615110.jpg');
 
 -- --------------------------------------------------------
 
@@ -118,36 +73,7 @@ CREATE TABLE `tbl_image2` (
 --
 
 INSERT INTO `tbl_image2` (`image_id`, `image_name`) VALUES
-(0, 'iconlogin_1.png'),
-(0, 'iconlogin.png'),
-(0, 'icon1.png'),
-(0, 'icon1_1.png'),
-(0, 'icon1_2.png'),
-(0, 'icon2.png'),
-(0, 'icon2_1.png'),
-(0, 'icon2.png'),
-(0, 'YYYYYYY.jpg'),
-(0, 'YYYYYY.jpg'),
-(0, 'YYYYYY2.jpg'),
-(0, 'YYYYYY.jpg'),
-(0, 'YYYYYY_1.jpg'),
-(0, 'icon3.png'),
-(0, 'icon3_1.png'),
-(0, 'icon3_2.png'),
-(0, 'icon3_3.png'),
-(0, '5.jpg'),
-(0, '5_1.jpg'),
-(0, '5_2.jpg'),
-(0, '5_3.jpg'),
-(0, 'plakrim.jpg'),
-(0, 'plakrim.jpg'),
-(0, 'plakrim_1.jpg'),
-(0, 'plakrim_2.jpg'),
-(0, 'plakrim_3.jpg'),
-(0, 'plakrim_4.jpg'),
-(0, 'plakrim_5.jpg'),
-(0, 'icon3.png'),
-(0, 'icon13.png');
+(0, '1.jpg');
 
 -- --------------------------------------------------------
 
@@ -165,9 +91,8 @@ CREATE TABLE `tbl_image3` (
 --
 
 INSERT INTO `tbl_image3` (`image_id`, `image_name`) VALUES
-(0, '11.jpg'),
-(0, '11_1.jpg'),
-(0, '11_2.jpg');
+(0, '2.jpg'),
+(0, '2_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -177,7 +102,7 @@ INSERT INTO `tbl_image3` (`image_id`, `image_name`) VALUES
 
 CREATE TABLE `tbl_image4` (
   `image_id` tinyint(4) NOT NULL,
-  `image_name` varchar(50) NOT NULL
+  `image_name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -185,9 +110,7 @@ CREATE TABLE `tbl_image4` (
 --
 
 INSERT INTO `tbl_image4` (`image_id`, `image_name`) VALUES
-(0, 'icon1.png'),
-(0, 'icon2.png'),
-(0, 'doc2.jpg');
+(0, '3.jpg');
 
 -- --------------------------------------------------------
 
@@ -207,9 +130,72 @@ CREATE TABLE `type1` (
 --
 
 INSERT INTO `type1` (`name`, `type`, `calorie`, `price`) VALUES
-('à¸•à¹‰à¸¡à¸¢à¸³', '2', '200', 3),
-('à¸•à¹‰à¸¡', '30', '1000', 32),
-('à¸•à¹‰à¸¡à¸¢à¸³à¸™à¹‰à¸³à¸‚à¹‰à¸™', '30', '3000', 44);
+('à¸•à¹‰à¸¡à¸¢à¸³à¸à¸£à¸°à¸”à¸¹à¸à¸«à¸¡à¸¹', '20', '2000', 50);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `type2`
+--
+
+CREATE TABLE `type2` (
+  `name` varchar(50) NOT NULL,
+  `calorie` varchar(50) NOT NULL,
+  `price` int(11) NOT NULL,
+  `type` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `type2`
+--
+
+INSERT INTO `type2` (`name`, `calorie`, `price`, `type`) VALUES
+('à¹„à¸à¹ˆà¸—à¸­à¸”à¸™à¹‰à¸³à¸›à¸¥à¸²', '5002', 30, '10'),
+('à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 35, '10'),
+('à¸‹à¸µà¹ˆà¹‚à¸„à¸£à¸‡à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 60, '15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `type3`
+--
+
+CREATE TABLE `type3` (
+  `name` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
+  `calorie` varchar(45) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `type3`
+--
+
+INSERT INTO `type3` (`name`, `type`, `calorie`, `price`) VALUES
+('à¹à¸à¸‡à¸ªà¹‰à¸¡', '12', '22', 22),
+('à¹à¸à¸‡à¸«à¸¡à¸¹à¹€à¸—à¹‚à¸ž', '30', '2000', 40);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `type4`
+--
+
+CREATE TABLE `type4` (
+  `name` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
+  `calorie` varchar(45) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `type4`
+--
+
+INSERT INTO `type4` (`name`, `type`, `calorie`, `price`) VALUES
+('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸«à¸¡à¸¹', '20', '2000', 30),
+('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸«à¸¡à¸¹à¹„à¸', '20', '2000', 35),
+('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸à¸¸à¹‰à¸‡', '20', '3000', 40);
 
 --
 -- Indexes for dumped tables
@@ -225,6 +211,24 @@ ALTER TABLE `admin`
 -- Indexes for table `type1`
 --
 ALTER TABLE `type1`
+  ADD PRIMARY KEY (`price`);
+
+--
+-- Indexes for table `type2`
+--
+ALTER TABLE `type2`
+  ADD PRIMARY KEY (`price`);
+
+--
+-- Indexes for table `type3`
+--
+ALTER TABLE `type3`
+  ADD PRIMARY KEY (`price`);
+
+--
+-- Indexes for table `type4`
+--
+ALTER TABLE `type4`
   ADD PRIMARY KEY (`price`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
