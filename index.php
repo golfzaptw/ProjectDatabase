@@ -66,13 +66,13 @@
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="foods1.php">ประเภท:ต้ม</a></li>
+            <li><a href="soup.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods2.php">ประเภท:ทอด</a></li>
+            <li><a href="fried.php">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods3.php">ประเภท:แกง</a></li>
+            <li><a href="soup.php">ประเภท:แกง</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods4.php">ประเภท:ผัด</a></li>
+            <li><a href="puff.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
        <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>

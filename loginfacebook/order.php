@@ -64,14 +64,14 @@ if($_GET["Action"] == "Logout")
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>หน้า index</title>
+  <title>หน้า index</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-	
+  
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 
   
 
-	<script src="./js/jquery.js"></script>
+  <script src="./js/jquery.js"></script>
   <script type="text/javascript" scr="./js/jquery.js"></script>
   <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 
@@ -176,7 +176,7 @@ if($_GET["Action"] == "Logout")
             <li><a href="loginfb_puff.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li><a href=".../order.php">ตารางลำดับการสั่งซื้อ</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
        <li><a href="document.php"></a></li><br><br><br><br>
 
