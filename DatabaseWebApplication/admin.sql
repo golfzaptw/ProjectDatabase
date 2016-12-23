@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2016 at 10:18 AM
+-- Generation Time: Dec 23, 2016 at 04:10 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -55,7 +55,10 @@ CREATE TABLE `tbl_image` (
 --
 
 INSERT INTO `tbl_image` (`image_id`, `image_name`) VALUES
-(0, '184615110.jpg');
+(0, '184615110.jpg'),
+(0, 'YYYYYYYYY.jpg'),
+(0, 'YYYYYYYYY_1.jpg'),
+(0, 'YYYYYYYYY_2.jpg');
 
 -- --------------------------------------------------------
 
@@ -73,7 +76,8 @@ CREATE TABLE `tbl_image2` (
 --
 
 INSERT INTO `tbl_image2` (`image_id`, `image_name`) VALUES
-(0, '1.jpg');
+(0, '1.jpg'),
+(0, 'YYYYYYYYY.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,6 +119,29 @@ INSERT INTO `tbl_image4` (`image_id`, `image_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `userID` int(11) NOT NULL,
+  `userName` varchar(20) NOT NULL,
+  `userProfession` varchar(50) NOT NULL,
+  `userPic` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`userID`, `userName`, `userProfession`, `userPic`) VALUES
+(42, 'dwayne johnson', 'actor, wrestler', '380289.jpg'),
+(43, 'justin bieber', 'singer', '995062.jpg'),
+(44, 'chris hemsworth', 'actor', '171544.jpg'),
+(41, 'john cena', 'wrestler', '549279.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `type1`
 --
 
@@ -130,7 +157,10 @@ CREATE TABLE `type1` (
 --
 
 INSERT INTO `type1` (`name`, `type`, `calorie`, `price`) VALUES
-('à¸•à¹‰à¸¡à¸¢à¸³à¸à¸£à¸°à¸”à¸¹à¸à¸«à¸¡à¸¹', '20', '2000', 50);
+('à¸•à¹‰à¸¡à¸¢à¸³à¸à¸¸à¹‰à¸‡', '23', '3333', 50),
+('à¸•à¹‰à¸¡à¸¢à¸³à¸—à¸°à¹€à¸¥', '34', '3344', 40),
+('à¸•à¹‰à¸¡à¸‚à¹ˆà¸²à¹„à¸à¹ˆ', '30', '2000', 50),
+('à¸•à¹‰à¸¡à¹à¸‹à¸šà¸«à¸¡à¸¹', '34', '3444', 34);
 
 -- --------------------------------------------------------
 
@@ -150,9 +180,10 @@ CREATE TABLE `type2` (
 --
 
 INSERT INTO `type2` (`name`, `calorie`, `price`, `type`) VALUES
-('à¹„à¸à¹ˆà¸—à¸­à¸”à¸™à¹‰à¸³à¸›à¸¥à¸²', '5002', 30, '10'),
-('à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 35, '10'),
-('à¸‹à¸µà¹ˆà¹‚à¸„à¸£à¸‡à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 60, '15');
+('à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 60, '10'),
+('à¸‚à¸²à¸à¸šà¸—à¸­à¸”à¸à¸£à¸°à¹€à¸—à¸µà¸¢à¸¡', '333', 50, '23'),
+('à¸‹à¸µà¹ˆà¹‚à¸„à¸£à¸‡à¸«à¸¡à¸¹à¸—à¸­à¸”', '500', 60, '15'),
+('à¹„à¸à¹ˆà¸—à¸­à¸”à¸™à¹‰à¸³à¸›à¸¥à¸²', '5002', 30, '10');
 
 -- --------------------------------------------------------
 
@@ -173,7 +204,9 @@ CREATE TABLE `type3` (
 
 INSERT INTO `type3` (`name`, `type`, `calorie`, `price`) VALUES
 ('à¹à¸à¸‡à¸ªà¹‰à¸¡', '12', '22', 22),
-('à¹à¸à¸‡à¸«à¸¡à¸¹à¹€à¸—à¹‚à¸ž', '30', '2000', 40);
+('à¹à¸à¸‡à¸«à¸¡à¸¹à¹€à¸—à¹‚à¸ž', '30', '2000', 40),
+('à¹à¸à¸‡à¹€à¸«à¸¥à¸·à¸­à¸‡', '34', '33333', 33),
+('à¹à¸à¸‡à¹€à¸‚à¸µà¸¢à¸§à¸«à¸§à¸²à¸™', '34', '3000', 34);
 
 -- --------------------------------------------------------
 
@@ -193,9 +226,10 @@ CREATE TABLE `type4` (
 --
 
 INSERT INTO `type4` (`name`, `type`, `calorie`, `price`) VALUES
+('à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸›à¸¥à¸²à¸«à¸¡à¸¶à¸', '23', '2323', 30),
+('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸à¸¸à¹‰à¸‡', '20', '3000', 40),
 ('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸«à¸¡à¸¹', '20', '2000', 30),
-('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸«à¸¡à¸¹à¹„à¸', '20', '2000', 35),
-('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸à¸¸à¹‰à¸‡', '20', '3000', 40);
+('à¸œà¸±à¸”à¸à¸£à¸°à¹€à¸žà¸£à¸²à¸«à¸¡à¸¹à¹„à¸', '20', '2000', 35);
 
 --
 -- Indexes for dumped tables
@@ -208,29 +242,44 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`password`,`id`);
 
 --
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`userID`);
+
+--
 -- Indexes for table `type1`
 --
 ALTER TABLE `type1`
-  ADD PRIMARY KEY (`price`);
+  ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `type2`
 --
 ALTER TABLE `type2`
-  ADD PRIMARY KEY (`price`);
+  ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `type3`
 --
 ALTER TABLE `type3`
-  ADD PRIMARY KEY (`price`);
+  ADD PRIMARY KEY (`name`);
 
 --
 -- Indexes for table `type4`
 --
 ALTER TABLE `type4`
-  ADD PRIMARY KEY (`price`);
+  ADD PRIMARY KEY (`name`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
