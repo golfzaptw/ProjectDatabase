@@ -1,3 +1,24 @@
+<?php
+
+require_once 'dbconfig.php';
+  
+  if(isset($_GET['delete_id']))
+  {
+    // select image from db to delete
+    $stmt_select = $DB_con->prepare('SELECT userPic FROM tbl_users WHERE userID =:uid');
+    $stmt_select->execute(array(':uid'=>$_GET['delete_id']));
+    $imgRow=$stmt_select->fetch(PDO::FETCH_ASSOC);
+    unlink("user_images/".$imgRow['userPic']);
+    
+    // it will delete an actual record from db
+    $stmt_delete = $DB_con->prepare('DELETE FROM tbl_users WHERE userID =:uid');
+    $stmt_delete->bindParam(':uid',$_GET['delete_id']);
+    $stmt_delete->execute();
+    
+    header("Location: edittype1.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +37,13 @@
 .facebook:hover{
   opacity: 0.6;
   
+}
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
 }
 
 
@@ -58,7 +86,7 @@
             <li><a href="foods4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-       <li class="active"><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li ><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
         <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
        <li><a href="document.php">คู่มือคำแนะนำ</a></li>
         
@@ -78,7 +106,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-</div> <br><br><br><br><br><br><br><br><br>
+</div> <br><br><br><br><br>
 
 
 
@@ -155,6 +183,75 @@ mysql_close($objConnect);
 </div>
 
 
+
+
+
+<div class="container">
+
+  <div class="page-header">
+      <center><h1 class="h2">รูปรายการอาหารแต่ละชนิด</h1> </center>
+    </div>
+    
+<br />
+
+<div class="container">
+<?php
+  
+  $stmt = $DB_con->prepare('SELECT userID, userName, userProfession, userPic FROM tbl_users3 ORDER BY userID DESC');
+  $stmt->execute();
+  
+  if($stmt->rowCount() > 0)
+  {
+    while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+    {
+      extract($row);
+      ?>
+      <div class="col-xs-3">
+        <p class="page-header"><?php echo $userName."&nbsp;/&nbsp; ".$userProfession; ?> </p>
+        <img src="user_images3/<?php echo $row['userPic']; ?>" class="img-rounded" width="250px" height="250px" />
+        <p class="page-header">
+       
+        </p>
+      </div>       
+      <?php
+    }
+  }
+  else
+  {
+    ?>
+        <div class="col-xs-12">
+          <div class="alert alert-warning">
+              <span class="glyphicon glyphicon-info-sign"></span> &nbsp; No Data Found ...
+            </div>
+        </div>
+        <?php
+  }
+  
+?>
+</div>  
+
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>  </footer>
 
 
 

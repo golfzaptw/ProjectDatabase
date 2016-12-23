@@ -18,7 +18,13 @@
   
 }
 
-
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
 
 </style>
 
@@ -90,7 +96,7 @@
       </div>
   <div class="col-md-6">
 <br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
+  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</ <div>
 
 </div>
 </div>
@@ -136,24 +142,7 @@
 </div>
 
 
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
 
-      </div>
-  <div class="col-md-6">
-
-  <img src="image/2.jpg" style="width:404px;height:228px;" align="right" >
-    <div>
-
-</div>
-</div>
-</div>
-</div>
 
 
 
@@ -189,5 +178,7 @@
 
 
 
+
+<footer>  </footer>
 
 </body>

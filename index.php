@@ -9,7 +9,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 	
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-  
+ 
 
 	<script src="./js/jquery.js"></script>
   <script type="text/javascript" scr="./js/jquery.js"></script>
@@ -28,6 +28,24 @@
 
 }
 
+
+
+article {
+    
+    background-color: #FFEC8B;
+    margin-left: 0px;
+    border-left:70px ;
+    padding: 1em;
+    overflow: hidden;
+}
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
 
 
 </style>
@@ -204,7 +222,10 @@
 
 
 
-<div class="jumbotron">
+
+
+<article>
+  
 <div class="container">
 <div class="row">
       <div class="col-md-6">
@@ -218,10 +239,9 @@
 </div>
 </div>
 </div>
-</div><br><br><br><br><br> <br><br>
 
+<br><br><br>
 
-<div class="jumbotron">
 <div class="container">
 <div class="row">
       <div class="col-md-6">
@@ -239,7 +259,16 @@
 </div>
 </div>
 </div>
-</div>
+
+
+</article>
+
+
+
+
+
+
+
 
 <br><br><br>
 
@@ -323,6 +352,12 @@
 </div>
 
 
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<footer>  </footer>
 
 
 

@@ -71,18 +71,18 @@ $strSQL .="WHERE name = '".$_GET["CusID"]."' ";
 $objQuery = mysql_query($strSQL);
 if($objQuery)
 {
-	//echo "Save Done.";
+	echo "<center> <H2> บันทักเรียบร้อย  </H2></center>";
 	
 
 }
 else
 {
-	echo "Error Save [".$strSQL."]";
+	echo "<center> <H2> บันทึกข้อมูลล้มเหลว กรุณตรวจสอบท่านตั้งชื่อรายการอาหารซ้ำกัน </H2></center> ";
 }
 mysql_close($objConnect);
 ?>
 
-<center><H2>บันทักเรียบร้อย</H2></center>
+
 
 
 

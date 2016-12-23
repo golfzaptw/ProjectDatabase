@@ -17,6 +17,14 @@
   
 }
 
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
 
 
 </style>
@@ -137,64 +145,56 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-xs-12 col-md-4">  
-  <div class="container">
-  <img src="image/icon2.png" alt="..." class="img-circle">
+       <div class="col-md-12" >
+           <div class="panel-body">
+              <p>
+
+                  <div class="row">
+                   <div class="col-sm-6 col-md-4">
+                   
+                  <center><img src="image/icon8.png" alt="..." class="img-circle"></center>
+                  <div class="caption">
+                  <center><a href="https://www.facebook.com/karn.ninparwit"><h3>facesbook:ร้าน</h3></a></center>       
+      
+    </div>
+  </div>
+  <div class="row">
+                   <div class="col-sm-6 col-md-4">
+                  
+                  <center><img src="image/icon7.png" alt="..." class="img-circle"></center>
+                  <div class="caption">
+                  <center><a href="#" data-toggle="modal" data-target="#myModal2" ><h3>เบอร์ติดต่อร้าน</h3></a></center>       
+                  
+     
+    </div>
+  </div>
+  <div class="row">
+                   <div class="col-sm-6 col-md-4">
+                  
+                  <center><img src="image/icon34.png" alt="..." class="img-circle"  width="150" height="150" border-radius="50"/><center>
+                  <div class="caption">
+                   <center><a href="#" data-toggle="modal" data-target="#myModal3" ><h3>แผนที่ร้าน</h3></a></center>    
+                  
+      
+    </div>
+  </div>
+</div>
 </div>
 
-  </div>
-
-  <div class="col-xs-6 col-md-6">
-    
-       <h1> “ร้านอาหาร” เป็นธุรกิจประเภทหนึ่งที่ได้รับความนิยมสูง ซึ่งการเปิดหรือดำเนินธุรกิจร้านอาหารไม่มีสูตรสำเร็จตายตัว แต่ก็มีรายละเอียดมากมายที่ควรให้ความสำคัญ โดยหนังสือชื่อ “กลยุทธ์ร้านอาหารมืออาชีพ”สำนักพิมพ์แม่บ้านทันสมัย ก็ให้ข้อมูลไว้อย่างน่าสนใจ.“.. จะขายอาหารอะไร” การตัดสินใจว่าจะขายอะไรดีนี้สำคัญมาก เพราะถ้าเราวางนโยบายได้ ต่อไปก็จะวางแผนแต่งร้านและคิดถึงแผนธุรกิจได้ในลำดับต่อไป ซึ่งอาหารแต่ละ       </h1>
-
-
-  </div>
 </div>
-</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                 
 
-
-
-<div class="container">
-<div class="row">
-  <div class="col-xs-12 col-md-4">  
-  <div class="container">
-  <img src="image/icon7.png" alt="..." class="img-circle">
+                </p>
+        </div>
+        </div> 
+        </div>
+        </div>
+        <br><br><br><br><br><br><br> 
 </div>
 
-  </div>
-
-  <div class="col-xs-6 col-md-6">
-    
-       <h1> “ร้านอาหาร” เป็นธุรกิจประเภทหนึ่งที่ได้รับความนิยมสูง ซึ่งการเปิดหรือดำเนินธุรกิจร้านอาหารไม่มีสูตรสำเร็จตายตัว แต่ก็มีรายละเอียดมากมายที่ควรให้ความสำคัญ โดยหนังสือชื่อ “กลยุทธ์ร้านอาหารมืออาชีพ”สำนักพิมพ์แม่บ้านทันสมัย ก็ให้ข้อมูลไว้อย่างน่าสนใจ.“.. จะขายอาหารอะไร” การตัดสินใจว่าจะขายอะไรดีนี้สำคัญมาก เพราะถ้าเราวางนโยบายได้ ต่อไปก็จะวางแผนแต่งร้านและคิดถึงแผนธุรกิจได้ในลำดับต่อไป ซึ่งอาหารแต่ละ       </h1>
 
 
-  </div>
-</div><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-<div class="container">
-<div class="row">
-  <div class="col-xs-12 col-md-4">  
-  <div class="container">
-  <img src="image/icon8.png" alt="..." class="img-circle">
-</div>
-
-  </div>
-
-  <div class="col-xs-6 col-md-6">
-    
-       <h1> “ร้านอาหาร” เป็นธุรกิจประเภทหนึ่งที่ได้รับความนิยมสูง ซึ่งการเปิดหรือดำเนินธุรกิจร้านอาหารไม่มีสูตรสำเร็จตายตัว แต่ก็มีรายละเอียดมากมายที่ควรให้ความสำคัญ โดยหนังสือชื่อ “กลยุทธ์ร้านอาหารมืออาชีพ”สำนักพิมพ์แม่บ้านทันสมัย ก็ให้ข้อมูลไว้อย่างน่าสนใจ.“.. จะขายอาหารอะไร” การตัดสินใจว่าจะขายอะไรดีนี้สำคัญมาก เพราะถ้าเราวางนโยบายได้ ต่อไปก็จะวางแผนแต่งร้านและคิดถึงแผนธุรกิจได้ในลำดับต่อไป ซึ่งอาหารแต่ละ       </h1>
-
-
-  </div>
-</div><br><br><br><br><br><br>
-
-
-
-
+<!-- ส่วนการแสดง POPUP -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -225,6 +225,68 @@
 </div>
 
 
+
+<!-- ส่วนการแสดง POPUP -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">เบอร์ติดต่อร้าน:</h4>
+      </div>
+      <div class="modal-body" align="center">
+
+
+
+     <H4>089-0873063 (ลุงเพชร)</H4><br>
+      <H4>083-0833363 (counter:ร้าน)</H4>
+
+     </a>
+
+        
+        
+    
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ส่วนการแสดง POPUP -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">แผนที่ร้าน:</h4>
+      </div>
+      <div class="modal-body" align="center">
+
+
+
+     
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8008516771065!2d99.89415341446707!3d19.02849518711525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d83369b9fd7285%3A0x48422f267bc2c6ec!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lie4Liw4LmA4Lii4Liy!5e0!3m2!1sth!2sth!4v1482462201749" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+        
+        
+    
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer>  </footer>
 
 
 </body>

@@ -2,7 +2,25 @@
 <?php
 include ("Restrict.php");
 include("connecttype4.php");
-include ("codefromupload3.php");
+
+
+require_once 'dbconfig.php';
+  
+  if(isset($_GET['delete_id']))
+  {
+    // select image from db to delete
+    $stmt_select = $DB_con->prepare('SELECT userPic FROM tbl_users4 WHERE userID =:uid');
+    $stmt_select->execute(array(':uid'=>$_GET['delete_id']));
+    $imgRow=$stmt_select->fetch(PDO::FETCH_ASSOC);
+    unlink("user_images4/".$imgRow['userPic']);
+    
+    // it will delete an actual record from db
+    $stmt_delete = $DB_con->prepare('DELETE FROM tbl_users4 WHERE userID =:uid');
+    $stmt_delete->bindParam(':uid',$_GET['delete_id']);
+    $stmt_delete->execute();
+    
+    header("Location: edittype4.php");
+  }
 
 ?>
 
@@ -17,6 +35,12 @@ include ("codefromupload3.php");
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>Upload, Insert, Update, Delete an Image using PHP MySQL - Coding Cage</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 
 
 
@@ -111,21 +135,60 @@ mysql_close($objConnect);
 
 <br><br><br><br><br><br><br><br><br>
 
-
-<div class="jumbotron">
 <div class="container">
-<form action="" method="post" enctype="multipart/form-data" name="form2" id="form4">
-  <p>
-    <H2> อัพโหลดรูปอาหารประเภท:ผัด</H2> <br><br>
-     
-    <input name="image_name" type="file" id="image_name" size="40" />
-  </p>
-  <p>
-    <input type="submit" value="Upload" />
-    <input type="hidden" name="MM_insert" value="form4" />
-  </p>
-</form>
-</div>
+
+  <div class="page-header">
+      <h1 class="h2">เพิ่มรูปรายการอาหาร <a class="btn btn-default" href="addnew4.php"> <span class="glyphicon glyphicon-plus"></span> &nbsp; add new </a></h1> 
+    </div>
+    
+<br />
+
+<div class="row">
+<?php
+  
+  $stmt = $DB_con->prepare('SELECT userID, userName, userProfession, userPic FROM tbl_users4 ORDER BY userID DESC');
+  $stmt->execute();
+  
+  if($stmt->rowCount() > 0)
+  {
+    while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+    {
+      extract($row);
+      ?>
+      <div class="col-xs-3">
+        <p class="page-header"><?php echo $userName."&nbsp;|ชื่ออาหาร:&nbsp; ".$userProfession; ?> </p>
+        <img src="user_images4/<?php echo $row['userPic']; ?>" class="img-rounded" width="250px" height="250px" />
+        <p class="page-header">
+        <span>
+        <a class="btn btn-info" href="editform4.php?edit_id=<?php echo $row['userID']; ?>" title="click for edit" onclick="return confirm('sure to edit ?')"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+        <a class="btn btn-danger" href="?delete_id=<?php echo $row['userID']; ?>" title="click for delete" onclick="return confirm('sure to delete ?')"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a>
+        </span>
+        </p>
+      </div>       
+      <?php
+    }
+  }
+  else
+  {
+    ?>
+        <div class="col-xs-12">
+          <div class="alert alert-warning">
+              <span class="glyphicon glyphicon-info-sign"></span> &nbsp; No Data Found ...
+            </div>
+        </div>
+        <?php
+  }
+  
+?>
+</div>  
+
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
 
 
 <br><br><br><br><br><br><br><br><br>
