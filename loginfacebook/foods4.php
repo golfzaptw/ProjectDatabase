@@ -64,17 +64,21 @@ if($_GET["Action"] == "Logout")
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>หน้า index</title>
+  <title>หน้า index</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-	
+  
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 
   
 
-	<script src="./js/jquery.js"></script>
+  <script src="./js/jquery.js"></script>
   <script type="text/javascript" scr="./js/jquery.js"></script>
   <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-
+         <link rel="shortcut icon" href="pic.titles.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <?php include './css.php'; ?><link rel="stylesheet"href="product.css">
     
 </head>
 
@@ -89,7 +93,32 @@ if($_GET["Action"] == "Logout")
 }
 </style>
 
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
 
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+</style>
 
 
 
@@ -99,6 +128,8 @@ if($_GET["Action"] == "Logout")
 
        
 <nav id="scrollingNav" class="navbar navbar-inverse navbar-fixed-top" role= "navigation">
+
+
 
  
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -182,8 +213,102 @@ if($_GET["Action"] == "Logout")
     </div><!-- /.navbar-collapse -->
   <!-- /.container-fluid -->
 </nav>
-
+<div class="ax" style="padding-top: 120px;"></div>
+      
+       <?php
+       
+       
+      
+        include './sqlConn.php';
+       
+      $sql = "SELECT * FROM type4";
+$result = mysqli_query($con, $sql);
+                $i =0;
+    while($row = mysqli_fetch_assoc($result)) {
+        $id[$i] = $row["id"];
+        $name[$i] = $row["name"];
+        $price[$i] = $row["price"];
+        $type[$i] = $row["type"];
+        $i++;
+    }
+  //  $cart ->id[$x];
+   
+     $checkOK=1;
+  
+ echo '<div style="padding-left : 30px;"><h3><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  รายการสินค้า</h3><hr>';
+    for($j =0 ;$j< count($id);$j++){
+        
+       echo '
+          
+       <div class="imgx">
+     <div class="img">
+ 
+      <img src="1.jpg" width="20vh" height="20vh">
+    <div class="desc"><h5 style="color:black; font-size:14px;">'.$id[$j].'&nbsp;'.$name[$j].'</h5>ราคา '.$price[$j].' บาท<br>';
+if($status[$j] = true){
+    
+     if(isset($_SESSION['UserID'])){ echo '<a class="btn btn-warning" href="cart4.php?p_id='.$id[$j].'&act=add"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>เพิ่มในรถเข็น</a> ';}
+else echo '<a class="btn btn-warning lnv" href="login.php"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">เพิ่มในรถเข็น</a>';
+     }
+else if($status[$j] == "out.png"){
+        echo '<h5 style="color:red;">ขออภัย สินค้าหมด</h5>';}
+        else {
+        echo 'คุณเลือกสินค้านี้แล้ว';}
+    
+       
+ echo '</div></div></div> '; }
+ 
+?></center>
 </div>
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ขั้นตอนการสั่งอาหารเพียง 3 ขั้นตอน</h4>
+      </div>
+      <div class="modal-body" align="center">
+
+
+
+     <a href="loginfacebook/index.php" class="facebook"> 
+     <img src="./image/BS.jpg" width="500" height="200" >
+
+
+     </a>
+
+        
+        
+    
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container">
+
+  
+    
+<br />
+
+
  <?php endif ?>
 
 
