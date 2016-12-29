@@ -245,16 +245,7 @@ $result = mysqli_query($con, $sql);
  
       <img src="1.jpg" width="20vh" height="20vh">
     <div class="desc"><h5 style="color:black; font-size:14px;">'.$id[$j].'&nbsp;'.$name[$j].'</h5>ราคา '.$price[$j].' บาท<br>';
-if($status[$j] = true){
-    
-     if(isset($_SESSION['UserID'])){ echo '<a class="btn btn-warning" href="cart2.php?p_id='.$id[$j].'&act=add"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>เพิ่มในรถเข็น</a> ';}
-else echo '<a class="btn btn-warning lnv" href="login.php"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">เพิ่มในรถเข็น</a>';
-     }
-else if($status[$j] == "out.png"){
-        echo '<h5 style="color:red;">ขออภัย สินค้าหมด</h5>';}
-        else {
-        echo 'คุณเลือกสินค้านี้แล้ว';}
-    
+echo '<a class="btn btn-warning" href="cart2.php?p_id='.$id[$j].'&act=add"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>เพิ่มในรถเข็น</a> ';
        
  echo '</div></div></div> '; }
  
