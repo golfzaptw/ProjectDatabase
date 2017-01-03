@@ -39,13 +39,13 @@ if ($user) {
 //   }
 // }
 
-// // Logout
-// if($_GET["Action"] == "Logout")
-// {
-//   $facebook->destroySession();
-//   header("location:../index.php");
-//   exit();
-// }
+// Logout
+if($_GET["Action"] == "Logout")
+{
+  $facebook->destroySession();
+  header("location:../index.php");
+  exit();
+}
 
 ?>
 
@@ -141,9 +141,7 @@ if ($user) {
         <span class="icon-bar"></span>
       </button>
 <br>
-     <li><?php if ($user): ?>
-      <?php else: ?>
-      <div><br><br>
+     <li><?php if ($user): ?>      <?php else: ?>      <div><br><br>
        
          <?php endif ?>
          <?php if ($user):?><img class="circle" src="https://graph.facebook.com/<?php echo $user; ?>/picture" >
@@ -177,7 +175,8 @@ if ($user) {
 <?php if ($user): ?>
       <?php else: ?>
 
-      <div><br><br><br><br><br><br><br>
+      <div><br>
+      <br><br><br><br><br><br>
 
         <center><img src="./image/Facebook_icon.png" alt="..." width="120" height="120"></center>
         <center><H1><a href="<?php echo $loginUrl; ?>">Login Facebook</a > </div></H1></center><br>
@@ -198,14 +197,15 @@ if ($user) {
             <li role="separator" class="divider"></li>
             <li><a href="foods2.php">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
-            <li class="active"><a href="foods3.php">ประเภท:แกง</a></li>
+            <li><a href="foods3.php">ประเภท:แกง</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="foods4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
        <li ><a href="tableorder.php">ตารางลำดับการสั่งซื้อ</a></li>
        <li><a href="document.php">คู่มือคำแนะนำ</a></li>
-        <li>&nbsp;&nbsp;&nbsp;</li>
+       <li>&nbsp;&nbsp;&nbsp;</li>
+        
 
 
 
@@ -213,43 +213,65 @@ if ($user) {
     </div><!-- /.navbar-collapse -->
   <!-- /.container-fluid -->
 </nav>
-      
-       <?php
-       
-       
-      
-        include './sqlConn.php';
-       
-      $sql = "SELECT * FROM type3";
-$result = mysqli_query($con, $sql);
-                $i =0;
-    while($row = mysqli_fetch_assoc($result)) {
-        $id[$i] = $row["id"];
-        $name[$i] = $row["name"];
-        $price[$i] = $row["price"];
-        $type[$i] = $row["type"];
-        $i++;
-    }
-  //  $cart ->id[$x];
-   
-     $checkOK=1;
-  echo "<br>";echo "<br>";echo "<br>";echo "<br>";
- echo '<div style="padding-left : 30px;"><h3><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  รายการสินค้า</h3><hr>';
-    for($j =0 ;$j< count($id);$j++){
-        
-       echo '
-          
-       <div class="imgx">
-     <div class="img">
- 
-      <img src="../image/1.png" width="20vh" height="20vh">
-    <div class="desc"><h5 style="color:black; font-size:14px;">'.$id[$j].'&nbsp;'.$name[$j].'</h5>ราคา '.$price[$j].' บาท<br>';
-echo '<a class="btn btn-warning" href="cart3.php?p_id='.$id[$j].'&act=add"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>เพิ่มในรถเข็น</a> ';
-       
- echo '</div></div></div> '; }
- 
-?></center>
+      <div class="container">
+      <br><br><br><br>
+<div class="jumbotron">
+<div class="container">
+<div class="row">
+      <div class="col-md-6">
+      <img src="image/doc2.jpg" style="width:404px;height:228px;" >
+      </div>
+  <div class="col-md-6">
+<br><br><br>
+  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</ <div>
+
 </div>
+</div>
+</div>
+</div>
+
+
+<div class="jumbotron">
+<div class="container">
+<div class="row">
+      <div class="col-md-6">
+      
+<br>
+  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
+
+      </div>
+  <div class="col-md-6">
+
+  <img src="image/doc1.jpg" style="width:404px;height:228px;" align="right" >
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="jumbotron">
+<div class="container">
+<div class="row">
+      <div class="col-md-6">
+      <img src="image/1.jpg" style="width:404px;height:228px;" >
+      </div>
+  <div class="col-md-6">
+<br><br><br>
+  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
 
 
 

@@ -43,7 +43,7 @@ footer {
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand">  <img class="circle" src="./image/icon5.png" width="30" height="30"  border-radius="50"/></a>
-      <a class="navbar-brand" href="#">ร้านลุงเพชร</a>
+      <a class="navbar-brand" href="index.php">ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -73,7 +73,7 @@ footer {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+            <li><a href="loginfacebook/index.php">Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>
@@ -87,59 +87,23 @@ footer {
 
 </div>
 
-
+<br><br>
 <div class="jumbotron">
 <div class="container">
-<div class="row">
+
       <div class="col-md-6">
-      <img src="image/doc2.jpg" style="width:404px;height:228px;" >
+      <img src="image/icon5.png" width="400" height="400" >
       </div>
   <div class="col-md-6">
 <br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</ <div>
+  <div></div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div>
 
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      
-<br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
-
-      </div>
-  <div class="col-md-6">
-
-  <img src="image/doc1.jpg" style="width:404px;height:228px;" align="right" >
-    </div>
-
-</div>
 </div>
 </div>
 </div>
 
 
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/1.jpg" style="width:404px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
-
-</div>
-</div>
-</div>
-</div>
 
 
 

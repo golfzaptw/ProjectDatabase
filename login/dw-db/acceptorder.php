@@ -4,7 +4,6 @@ include ("Restrict.php");
 ?>
 
 
-
 <!-- ข้างบน คือ ที่ ต่อ database ในชื่อ Admin ที่ทำ  Restrict -->
 <html>
 <head>
@@ -52,6 +51,7 @@ include ("Restrict.php");
           </ul>
         </li>
 
+
             <li><a href="acceptorder.php">รับออเดอร์</a></li>
             <li><a href="<?php echo $logoutAction ?>">logout</a></li>  <!-- /ตรงนี้คือ  logout database >
         
@@ -62,19 +62,57 @@ include ("Restrict.php");
 
 <br><br><br><br><br><br><br><br><br>
 
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/icon5.png" style="width:228px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
- 
-   <h1>ยินดีต้อนรับ: Admin </h1>
+<center><div><h1>ตารางการสั่งซื้ออาหาร</h1></div></center>
+       <br><br>
+<?php
+  $hostname = 'localhost';
+  $username = 'root';
+  $password = '';
+  $dbname = 'admin';
 
+  try {
+    $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+
+    $sql = $dbh->prepare("SELECT * FROM order_head order by o_id DESC LIMIT 10");
+
+    if($sql->execute()) {
+       $sql->setFetchMode(PDO::FETCH_ASSOC);
+    }
+  }
+  catch(Exception $error) {
+      echo '<p>', $error->getMessage(), '</p>';
+  }
+
+
+
+?>
+
+<div class="container">         
+  <table class="table table-hover">
+  <?php while($row = $sql->fetch()) { ?>
+
+    <tr>
+      <td><?php echo $row['o_id']; ?></td>
+        <td><?php echo $row['o_name']; ?></td>
+        <td><?php echo $row['o_addr']; ?></td>
+        <td><?php echo $row['o_phone']; ?></td>
+        <td><div ><a href="delete.php?o_id=<?=$row['o_id']?>">ลบ</a></div></td>
+      </tr>
+         </div>
+
+      <?php } ?>
+    <thead>
+      <tr>
+      <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+  </table>
 </div>
-</div>
-</div>
+<center>
 
 
 

@@ -25,7 +25,7 @@ require_once 'dbconfig.php';
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>อาหารประเภท:ต้ม</title>
+  <title>อาหารประเภท:ทอด</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css.css">
   <script src="js/jquery.js"></script>
@@ -66,7 +66,7 @@ footer {
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand">  <img class="circle" src="./image/icon5.png" width="30" height="30"  border-radius="50"/></a>
-      <a class="navbar-brand" href="#">ร้านลุงเพชร</a>
+      <a class="navbar-brand" href="index.php">ร้านลุงเพชร</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,7 +96,7 @@ footer {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-           <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+           <li><a href="loginfacebook/index.php">Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>

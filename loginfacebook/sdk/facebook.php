@@ -225,4 +225,10 @@ class Facebook extends BaseFacebook
     }
     return implode('_', $parts);
   }
+
+  
 }
+$facebook = new Facebook(array(
+  'appId'  => '166496443822741',
+  'secret' => '2356a383baaa4a42e59a5a3899d8e99b',
+));

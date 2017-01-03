@@ -72,7 +72,7 @@ footer {
       </button>
 
       <a class="navbar-brand">  <img class="circle" src="./image/icon5.png" width="30" height="30"  border-radius="50"/></a>
-      <a class="navbar-brand" href="#">ร้านลุงเพชร </a>
+      <a class="navbar-brand" href="index.php">ร้านลุงเพชร </a>
       
     </div>
    
@@ -101,7 +101,7 @@ footer {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+            <li><a href="loginfacebook/index.php"   >Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>

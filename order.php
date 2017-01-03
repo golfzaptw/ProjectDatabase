@@ -72,7 +72,7 @@ footer {
       </button>
 
       <a class="navbar-brand">  <img class="circle" src="./image/icon5.png" width="30" height="30"  border-radius="50"/></a>
-      <a class="navbar-brand" href="#">ร้านลุงเพชร </a>
+      <a class="navbar-brand" href="index.php">ร้านลุงเพชร </a>
       
     </div>
    
@@ -101,7 +101,7 @@ footer {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#myModal" >Login Facebook</a></li>
+            <li><a href="loginfacebook/index.php" >Login Facebook</a></li>
             <li><a href="login/dw-db/index.php">Login for Admin</a></li>
             
           </ul>
@@ -138,6 +138,9 @@ footer {
   <center><img src="image/icon10.png" style="width:404px;height:228px;" align="center" ></center>
     </div>
     <br>
+
+<center><div><h1>ตารางการสั่งซื้ออาหาร</h1></div></center>
+       <br><br>
 <?php
   $hostname = 'localhost';
   $username = 'root';
@@ -147,7 +150,7 @@ footer {
   try {
     $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
 
-    $sql = $dbh->prepare("SELECT * FROM order_head");
+    $sql = $dbh->prepare("SELECT * FROM order_head order by o_id DESC ");
 
     if($sql->execute()) {
        $sql->setFetchMode(PDO::FETCH_ASSOC);
@@ -157,18 +160,26 @@ footer {
       echo '<p>', $error->getMessage(), '</p>';
   }
 
+
+
 ?>
+
 <div class="container">         
   <table class="table table-hover">
   <?php while($row = $sql->fetch()) { ?>
-      <tr>
+
+    <tr>
+      <td><?php echo $row['o_id']; ?></td>
         <td><?php echo $row['o_name']; ?></td>
         <td><?php echo $row['o_addr']; ?></td>
         <td><?php echo $row['o_phone']; ?></td>
       </tr>
+         </div>
+
       <?php } ?>
     <thead>
       <tr>
+      <th>#</th>
         <th>Name</th>
         <th>Address</th>
         <th>Phone</th>
@@ -176,7 +187,29 @@ footer {
     </thead>
   </table>
 </div>
+<center>
 
+<!-- <nav aria-label="..." >
+  <ul class="pagination pagination-lg">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"> <?php echo '<td><a href="tableorder.php?id=',$id,'">2</a></td>'; ?> </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav> -->
+</center>
+<center>
 
    </div>
 </div>
@@ -194,12 +227,7 @@ footer {
 
 <br><br><br>
 
-<div class="container" >
-     
 
-      </div></div></div>
-</div>
-</div>
 
 
 

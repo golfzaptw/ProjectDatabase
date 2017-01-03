@@ -1,11 +1,6 @@
 <?php
 require 'sdk/facebook.php';
 
-$facebook = new Facebook(array(
-  'appId'  => '166496443822741',
-  'secret' => '2356a383baaa4a42e59a5a3899d8e99b',
-));
-
 // Get User ID
 $user = $facebook->getUser();
 
@@ -25,32 +20,32 @@ if ($user) {
 }
 
 // Save to mysql
-if ($user) {
-  if($_GET["code"] != "")
-  {
-        $objConnect = mysql_connect("localhost","root","") or die(mysql_error());
-        $objDB = mysql_select_db("mydb");
-        mysql_query("SET NAMES UTF8");
-        $strSQL ="  INSERT INTO  tb_facebook (FACEBOOK_ID,NAME,LINK,CREATE_DATE) 
-          VALUES
-          ('".trim($user_profile["id"])."',
-          '".trim($user_profile["name"])."',
-          '".trim($user_profile["link"])."',
-          '".trim(date("Y-m-d H:i:s"))."')";
-        $objQuery  = mysql_query($strSQL);
-        mysql_close();
-        header("location:index.php");
-        exit();
-  }
-}
+// if ($user) {
+//   if($_GET["code"] != "")
+//   {
+//         $objConnect = mysql_connect("localhost","root","") or die(mysql_error());
+//         $objDB = mysql_select_db("mydb");
+//         mysql_query("SET NAMES UTF8");
+//         $strSQL ="  INSERT INTO  tb_facebook (FACEBOOK_ID,NAME,LINK,CREATE_DATE) 
+//           VALUES
+//           ('".trim($user_profile["id"])."',
+//           '".trim($user_profile["name"])."',
+//           '".trim($user_profile["link"])."',
+//           '".trim(date("Y-m-d H:i:s"))."')";
+//         $objQuery  = mysql_query($strSQL);
+//         mysql_close();
+//         header("location:tableorder.php");
+//         exit();
+//   }
+// }
 
-// Logout
-if($_GET["Action"] == "Logout")
-{
-  $facebook->destroySession();
-  header("location:../index.php");
-  exit();
-}
+// // Logout
+// if($_GET["Action"] == "Logout")
+// {
+//   $facebook->destroySession();
+//   header("location:../index.php");
+//   exit();
+// }
 
 ?>
 
@@ -69,6 +64,10 @@ if($_GET["Action"] == "Logout")
   
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 
   <script src="./js/jquery.js"></script>
@@ -192,28 +191,28 @@ if($_GET["Action"] == "Logout")
          <?php endif ?>
          <?php if ($user):?>
           <ul class="nav navbar-nav navbar-right">
-         
-<li class="dropdown">
+       <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายการอาหาร <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="foods1.php">ประเภท:ต้ม</a></li>
+            <li ><a href="foods1.php">ประเภท:ต้ม</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="foods2.php">ประเภท:ทอด</a></li>
+            <li class="active"><a href="foods2.php">ประเภท:ทอด</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="foods3.php">ประเภท:แกง</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="foods4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-       <li><a href="order.php">ตารางลำดับการสั่งซื้อ</a></li>
-        <li><a href="ContactUs.php">ติดต่อร้าน</a></li>
-       <li><a href="document.php"></a></li><br><br><br><br>
+       <li ><a href="tableorder.php">ตารางลำดับการสั่งซื้อ</a></li>
+       <li><a href="document.php">คู่มือคำแนะนำ</a></li>
+        <li>&nbsp;&nbsp;&nbsp;</li>
+
+
 
       </ul>
     </div><!-- /.navbar-collapse -->
   <!-- /.container-fluid -->
 </nav>
-<div class="ax" style="padding-top: 120px;"></div>
       
        <?php
        
@@ -234,7 +233,7 @@ $result = mysqli_query($con, $sql);
   //  $cart ->id[$x];
    
      $checkOK=1;
-  
+  echo "<br>";echo "<br>";echo "<br>";echo "<br>";
  echo '<div style="padding-left : 30px;"><h3><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  รายการสินค้า</h3><hr>';
     for($j =0 ;$j< count($id);$j++){
         
@@ -243,7 +242,7 @@ $result = mysqli_query($con, $sql);
        <div class="imgx">
      <div class="img">
  
-      <img src="1.jpg" width="20vh" height="20vh">
+      <img src="./image/1.png" width="20vh" height="20vh">
     <div class="desc"><h5 style="color:black; font-size:14px;">'.$id[$j].'&nbsp;'.$name[$j].'</h5>ราคา '.$price[$j].' บาท<br>';
 echo '<a class="btn btn-warning" href="cart2.php?p_id='.$id[$j].'&act=add"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>เพิ่มในรถเข็น</a> ';
        
