@@ -47,8 +47,7 @@ include ("Restrict.php");
             <li><a href="edittype4.php">ประเภท:ผัด</a></li>
           </ul>
         </li>
-          <li><a href="#">ตารางการสั่งอาหาร</a></li>
-            <li><a href="#">รับออเดอร์</a></li>
+            <li><a href="acceptorder.php">รับออเดอร์</a></li>
             <li><a href="<?php echo $logoutAction ?>">logout</a></li>  <!-- /ตรงนี้คือ  logout database >
         
       </ul>
@@ -71,7 +70,7 @@ $strSQL .="WHERE name = '".$_GET["CusID"]."' ";
 $objQuery = mysql_query($strSQL);
 if($objQuery)
 {
-  echo "<center> <H2> บันทักเรียบร้อย  </H2></center>";
+  echo "<center> <H2> บันทึกเรียบร้อย  </H2></center>";
   
 
 }

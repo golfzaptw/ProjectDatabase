@@ -96,10 +96,8 @@ footer {
       </div>
   <div class="col-md-6">
 <br><br><br>
-  <div></div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div>
-
-</div>
+  <div><iframe width="560" height="315" src="https://www.youtube.com/embed/QdMScttPkj0" frameborder="0" allowfullscreen></iframe></div>
+  <br><br><br><br><br><br><br><br><br><br>
 </div>
 </div>
 

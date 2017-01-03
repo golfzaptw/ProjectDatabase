@@ -213,61 +213,19 @@ if($_GET["Action"] == "Logout")
     </div><!-- /.navbar-collapse -->
   <!-- /.container-fluid -->
 </nav>
-      <div class="container">
-      <br><br><br><br>
+      <br><br>
 <div class="jumbotron">
 <div class="container">
-<div class="row">
+
       <div class="col-md-6">
-      <img src="image/doc2.jpg" style="width:404px;height:228px;" >
+      <img src="image/icon5.png" width="400" height="400" >
       </div>
   <div class="col-md-6">
 <br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</ <div>
-
+  <div><iframe width="560" height="315" src="https://www.youtube.com/embed/QdMScttPkj0" frameborder="0" allowfullscreen></iframe></div>
+  <br><br><br><br><br><br><br><br><br><br>
 </div>
 </div>
-</div>
-</div>
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      
-<br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4  col-xs-6 .col-md-4   .col-xs-6 .col-md-4   .col-xs-6 .col-md-4   
-
-      </div>
-  <div class="col-md-6">
-
-  <img src="image/doc1.jpg" style="width:404px;height:228px;" align="right" >
-    </div>
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-<div class="jumbotron">
-<div class="container">
-<div class="row">
-      <div class="col-md-6">
-      <img src="image/1.jpg" style="width:404px;height:228px;" >
-      </div>
-  <div class="col-md-6">
-<br><br><br>
-  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4  .col-xs-6 .col-md-4</  <div>
-
-</div>
-</div>
-</div>
-</div>
-
 
 
 </div>

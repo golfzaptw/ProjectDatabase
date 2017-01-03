@@ -288,25 +288,7 @@ html, body {
 </div>
 <center>
 
-<nav aria-label="..." >
-  <ul class="pagination pagination-lg">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"> <?php echo '<td><a href="tableorder.php?id=',$id,'">2</a></td>'; ?> </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+
 </center>
 
 
