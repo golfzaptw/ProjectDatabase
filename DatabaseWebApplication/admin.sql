@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2016 at 01:38 PM
+-- Generation Time: Jan 03, 2017 at 04:03 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `name`, `password`) VALUES
 (1, 'nawakarn', 1234),
-(2, 'golfzaptw', 1435);
+(2, 'golfzaptw', 1234);
 
 -- --------------------------------------------------------
 
@@ -111,39 +111,22 @@ INSERT INTO `fb` (`id`, `fbid`, `name`, `studentID`, `statusID`, `claim`, `idNam
 --
 
 CREATE TABLE `member` (
-  `UserID` int(3) UNSIGNED ZEROFILL NOT NULL,
-  `Username` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `Password` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `Name` varchar(100) CHARACTER SET utf16 NOT NULL,
-  `Status` enum('ADMIN','USER','CONNECT','OTHERCONNECT') CHARACTER SET utf16 NOT NULL DEFAULT 'USER',
-  `Surname` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `Birthday` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `Sex` varchar(10) CHARACTER SET utf16 NOT NULL,
-  `Address` mediumtext CHARACTER SET utf16 NOT NULL,
-  `Tel` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `LoginStatus` varchar(200) CHARACTER SET utf16 NOT NULL,
-  `LastUpdate` varchar(100) CHARACTER SET utf16 NOT NULL,
-  `Question` varchar(500) CHARACTER SET utf16 NOT NULL,
-  `Answer` varchar(500) CHARACTER SET utf16 NOT NULL,
-  `connect` varchar(20) CHARACTER SET utf16 NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `UserID` int(3) NOT NULL,
+  `Username` varchar(20) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Email` varchar(150) NOT NULL,
+  `Status` enum('ADMIN','USER') NOT NULL DEFAULT 'USER',
+  `SID` varchar(32) NOT NULL,
+  `Active` enum('Yes','No') NOT NULL DEFAULT 'No'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`UserID`, `Username`, `Password`, `Name`, `Status`, `Surname`, `Birthday`, `Sex`, `Address`, `Tel`, `LoginStatus`, `LastUpdate`, `Question`, `Answer`, `connect`) VALUES
-(013, 'mongkol20092@gmail.com', 'pautn1234', 'มงคล', 'OTHERCONNECT', 'มณีวรรณ์', '16/05/2539', '1', '34 ออสการ์ อพาร์ทเม้น 23232', '0988203979', '0', '0000-00-00 00:00:00', 'สวัสดี', 'ครัช', '016'),
-(020, '1234@1234.com', 'a123456', 'da', 'CONNECT', 'dasdasd', '2016-07-08', '1', 'asdasdergserges', '564654654654654', '0', '0000-00-00 00:00:00', 'aaa', 'aaa', ''),
-(012, 'pongvarid@gmail.com', 'pautn1234', 'พงษ์วริษฐ์', 'USER', 'มณีวรรณ์', '1996-05-16', '1', '161 à¸¡.1', '0988203979', '0', '0000-00-00 00:00:00', 'ไง', 'ดอก', ''),
-(019, 'flooka_kung@hotmail.com', '054350359a', 'นัทธพงศ์', 'OTHERCONNECT', 'ปัตโชติชัย', '1996-01-18', '1', '393/160', '0857110853', '0', '0000-00-00 00:00:00', 'สวัสดี', 'ครับ', '022'),
-(014, 'ex@ed.com', 'asd1234', 'สมรศรี', 'OTHERCONNECT', 'จิ๋มกังวาล', '16/05/2566', '2', 'edg', '191', '0', '0000-00-00 00:00:00', 'a', 'a', '016'),
-(015, 'ed@ex.com', 'ann1234', 'พาหุรัช', 'USER', 'คิ้วงาม', '12/22/2222', '2', 'รัชดา ซอย 1 กรุงเทพ 5767', '123', '', '0000-00-00', 'a', 'q', ''),
-(016, 'pongvarid@outlook.com', 'pautn0988203979', 'Pongvarid', 'CONNECT', 'Maneewan', '16/05/1996', '1', 'หมู่บ้านขี้เหงา โรงแรมม่านรูด 1312', '0988203979', '0', '0000-00-00 00:00:00', 'a', 's', ''),
-(018, 'heeyai@heeyai.com', 'pautn1234', 'กฤษฎีกา', 'USER', 'ลี๋เกี่ยวหวด', '1996-03-12', '1', '142 บ้านนอกคอกนา จ.บ้านนอก', '0988203979', '0', '0000-00-00 00:00:00', 'a', 'a', ''),
-(017, 'admin@crystal.com', 'admin2016', 'Admin', 'ADMIN', 'Crystal', '1996-05-16', '1', '-', '00', '0', '0000-00-00 00:00:00', 'admin', 'crystal', ''),
-(021, 'test@gmail.com', 'test123', 'nickname', 'USER', 'surname', '1954-10-07', '2', '-', '0921873785', '0', '0000-00-00 00:00:00', 'ไก่', 'ไข่', ''),
-(022, 'www@www.com', '054350359a', 'fgfd', 'CONNECT', 'gsdgfs', '1997-02-28', '1', 'fwdwf', '525262552', '0', '0000-00-00 00:00:00', 'sad', 'sad', '');
+INSERT INTO `member` (`UserID`, `Username`, `Password`, `Name`, `Email`, `Status`, `SID`, `Active`) VALUES
+(1, 'win', 'win123', 'Weerachai Nukitram', 'is_php@hotmail.com', 'USER', 'fb8d397fe980c10c84f0c77e1749c3f0', 'No');
 
 -- --------------------------------------------------------
 
@@ -165,11 +148,8 @@ CREATE TABLE `order_detail` (
 
 INSERT INTO `order_detail` (`d_id`, `o_id`, `p_id`, `d_qty`, `d_subtotal`) VALUES
 (1, 1, 3, 2, 100),
-(2, 1, 4, 9, 306),
-(3, 1, 2, 2, 80),
-(4, 1, 1, 3, 150),
-(5, 2, 2, 1, 40),
-(6, 3, 3, 1, 50);
+(2, 1, 1, 1, 50),
+(3, 1, 4, 2, 100);
 
 -- --------------------------------------------------------
 
@@ -191,9 +171,7 @@ CREATE TABLE `order_head` (
 --
 
 INSERT INTO `order_head` (`o_id`, `o_dttm`, `o_name`, `o_addr`, `o_email`, `o_phone`) VALUES
-(1, '2016-12-26 11:45:57', 'Neil P. Whittaker', '548 Bluff Street Annapolis Junction', 'software.engi@hotmail.com', '0918434806'),
-(2, '2016-12-26 11:48:39', 'Neil P. Whittaker', 'dd', 'dsadsa2dead@fsaf.dsad', '0918434806'),
-(3, '2016-12-26 11:51:26', 'Neil P. Whittaker', '548 Bluff Street Annapolis Junction', 'software.engi@hotmail.com', 'dsadsa');
+(1, '2017-01-03 15:40:10', 'Nawakarn', 'ggg', 'softwareenginerr@up.ac.th', '012-3456789');
 
 -- --------------------------------------------------------
 
@@ -379,10 +357,10 @@ CREATE TABLE `type1` (
 --
 
 INSERT INTO `type1` (`id`, `name`, `type`, `calorie`, `price`) VALUES
-(1, 'à¸•à¹‰à¸¡à¹à¸‹à¹ˆà¸š', '23', '3333', 50),
-(2, 'à¸•à¹‰à¸¡à¸¢à¸³à¸—à¸°à¹€à¸¥', '34', '3344', 40),
-(3, 'à¸•à¹‰à¸¡à¸‚à¹ˆà¸²à¹„à¸à¹ˆ', '30', '2000', 50),
-(4, 'à¸•à¹‰à¸¡à¸ˆà¸·à¸”', '34', '3444', 34);
+(3, 'à¸•à¹‰à¸¡à¸¢à¸³à¸«à¸¡à¸¹', '30', '2000', 50),
+(1, 'à¸•à¹‰à¸¡à¸¢à¸³à¸—à¸°à¹€à¸¥', '23', '3333', 50),
+(2, 'à¸•à¹‰à¸¡à¸¢à¸³à¹„à¸à¹ˆ', '23', '3333', 50),
+(4, 'à¸•à¹‰à¸¡à¸ˆà¸·à¸”', '30', '2000', 50);
 
 -- --------------------------------------------------------
 
@@ -557,25 +535,29 @@ ALTER TABLE `tbl_users`
 -- Indexes for table `type1`
 --
 ALTER TABLE `type1`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`name`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `type2`
 --
 ALTER TABLE `type2`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`name`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `type3`
 --
 ALTER TABLE `type3`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`name`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `type4`
 --
 ALTER TABLE `type4`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`name`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `viporder`
@@ -606,17 +588,17 @@ ALTER TABLE `fb`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `UserID` int(3) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `UserID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `order_head`
 --
 ALTER TABLE `order_head`
-  MODIFY `o_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `o_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product`
 --
