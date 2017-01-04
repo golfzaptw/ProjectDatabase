@@ -251,7 +251,6 @@ mysql_close($objConnect);
 
 
 
-<footer>  </footer>
 
 
 

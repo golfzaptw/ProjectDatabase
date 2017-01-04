@@ -42,6 +42,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ตระกร้าสินค้า</title>
  <?php include './css.php'; ?>
+ <style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}
+</style>
 </head>
 
 <body>
@@ -105,7 +131,7 @@ if(!empty($_SESSION['cart']))
 	echo "</tr>";
         
 }
-?></tbody></table></div>
+?></tbody></table><div align="right"><button class="button button5" type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm.php';" >สั่งซื้อ</button></div></div>
 
 </div>
 <script>
@@ -120,9 +146,6 @@ function myJavascriptFunction() {
     <tr>
 
 <tr>
-<td colspan="4" align="right">
-    <input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm.php';" />
-</td>
 </tr>
 </table>
 </form>

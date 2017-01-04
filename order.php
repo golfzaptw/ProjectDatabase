@@ -271,7 +271,7 @@ footer {
 
 
 
-<footer>  </footer>
+
 
 
 
